@@ -1,0 +1,87 @@
+/* Typography */
+
+// Import from Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+
+html,
+body {
+  height: 100%;
+  background-color: $color-white;
+  font-family: $font-playfair;
+  font-size: 18px;
+}
+
+body {
+  color: $color-tundora;
+}
+
+h1,h2,h3,h4,h5,h6 {
+ line-height: 1.45;
+ font-family: $font-roboto;
+ color: $color-emperor;
+}
+
+p {
+  line-height: 1.55;
+  margin: 15px 0;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.8em; }
+
+h1 {
+  margin: .67em 0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-family: $font-old-standard;
+  text-align: center;
+  font-style: italic;
+}
+
+/**
+* Colour social icons on hover.
+*/
+.fa-facebook:hover {
+    color: #3b5998;
+}
+.fa-twitter:hover {
+    color: #55acee;
+}
+.fa-comments:hover {
+  color: $color-contessa;
+}
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+.fa-github:hover {
+    color: #333333;
+}
+.fa-instagram:hover {
+  color: #35729b;
+}
+.fa-flickr:hover {
+  color: #ff0084;
+}
+.fa-rss:hover {
+    color: #f26522;
+}
+.fa-google-plus-square:hover {
+    color: #dd4b39;
+}
+
+.bitter-font {
+  font-family: $font-bitter;
+}

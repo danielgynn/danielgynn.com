@@ -1,0 +1,46 @@
+/* Responsive */
+
+@media (max-width: 780px) {
+  .wrap {
+    padding: 0 1rem;
+  }
+  .site-header {
+    margin: 0 1rem;
+  }
+  figure {
+    padding: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 1rem;
+  }
+  img {
+    padding: 0 -1rem;
+  }
+  .site-header {
+    margin: 0 1rem;
+    display: inline-block;
+    text-align: center;
+  }
+  figure.fw-image {
+    background-size: contain;
+    .full-width-image {
+      height: auto;
+    }
+  }
+  .post {
+    h1,
+    .blog-post-title  {
+      font-size: 1.5rem !important;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
