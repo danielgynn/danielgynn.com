@@ -5,11 +5,6 @@ var gulp     = require('gulp'),
   stylish    = require('jshint-stylish'),
   concat     = require('gulp-concat');
 
-// gulp.task('bootstrap', function() {
-//   return gulp.src('./bower_components/bootstrap-sass/assets/stylesheets/**/*')
-//   .pipe(gulp.dest('./assets/scss'));
-// });
-
 gulp.task('css', function() {
   return gulp.src('./bower_components/prism/themes/prism.css')
   .pipe(gulp.dest('./assets/css'));

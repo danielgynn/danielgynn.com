@@ -9,7 +9,7 @@
         <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>
 
-        <p>{{#if tags}} Posted in {{tags separator=" "}}{{/if}}</p>
+        <p>{{#if tags}} Posted in {{tags separator=", "}}{{/if}}</p>
 
         <div class="share">
           <a href="#disqus_thread"><i class="fa fa-comments"><span class="bitter-font"> Add a Comment</span></i></a>

@@ -358,7 +358,8 @@ th {
   padding: 0; }
 
 /* Typography */
-html, body {
+html,
+body {
   height: 100%;
   background-color: #fff;
   font-family: "Playfair-Display", "Georgia", serif;
@@ -603,7 +604,7 @@ figure:hover figcaption {
   max-width: 100%; }
 
 .blog-post .post-title {
-  font-size: 3rem;
+  font-size: 2.2rem;
   text-align: center;
   letter-spacing: -1px;
   font-weight: 300; }
