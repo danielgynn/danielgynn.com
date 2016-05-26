@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -439,6 +440,22 @@ h2, h3, h4, h5, h6 {
 
 .bitter-font {
   font-family: "Bitter", "Georgia", serif; }
+
+blockquote {
+  border-left: 8px solid #bf616a;
+  margin: 1.5em 10px;
+  padding: .5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+  blockquote::before {
+    color: #bf616a;
+    content: open-quote;
+    font-size: 5rem;
+    line-height: .1em;
+    margin-right: .25em;
+    vertical-align: -.4em; }
+  blockquote p {
+    display: inline;
+    font-size: 1.8rem; }
 
 /* Base */
 html {
