@@ -1,70 +1,71 @@
 {{!< default}}
+<section class="wrap">
+  {{#post}}
+    <article class="{{post_class}} blog-post">
+      <header class="inner cover post post-head">
+        <h1 class="cover-heading post-title blog-post-title">{{{title}}}</h1>
+        <section class="post-meta">
+          <hr>
+          <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on
+          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>
 
-{{#post}}
-  <article class="{{post_class}} blog-post">
-    <header class="inner cover post post-head">
-      <h1 class="cover-heading post-title blog-post-title">{{{title}}}</h1>
-      <section class="post-meta">
-        <hr>
-        <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>
+          <p>{{#if tags}} Posted in {{tags separator=", "}}{{/if}}</p>
 
-        <p>{{#if tags}} Posted in {{tags separator=", "}}{{/if}}</p>
+          <div class="share">
+            <a href="#disqus_thread"><i class="fa fa-comments"><span class="bitter-font"> Add a Comment</span></i></a>
+            <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+              <i class="fa fa-twitter"><span class="bitter-font"> Twitter</span></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+               onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');return false;">
+              <i class="fa fa-facebook"><span class="bitter-font"> Facebook</span></i>
+            </a>
+            <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus-square"><span class="bitter-font"> Google+</span></i>
+            </a>
+          </div>
+          <hr>
+        </section>
 
-        <div class="share">
-          <a href="#disqus_thread"><i class="fa fa-comments"><span class="bitter-font"> Add a Comment</span></i></a>
+        {{#if image}}
+          <figure>
+            <img class="center-image" src="{{image}}">
+          </figure>
+        {{/if}}
+      </header>
+
+      <div class="inner cover post post-body">
+        {{content}}
+      </div>
+
+      <hr style="margin-bottom:5px" />
+      <div class="inner cover post post-foot footer-info text-muted">
+
+        <div class="post-foot-left">
+          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+        </div>
+
+        <div class="post-foot-right">
+          Share this post:
           <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
              onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <i class="fa fa-twitter"><span class="bitter-font"> Twitter</span></i>
+            <i class="fa fa-twitter"></i>
           </a>
           <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
              onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');return false;">
-            <i class="fa fa-facebook"><span class="bitter-font"> Facebook</span></i>
+            <i class="fa fa-facebook"></i>
           </a>
           <a href="https://plus.google.com/share?url={{url absolute="true"}}"
              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-            <i class="fa fa-google-plus-square"><span class="bitter-font"> Google+</span></i>
+            <i class="fa fa-google-plus-square"></i>
           </a>
         </div>
-        <hr>
-      </section>
-
-      {{#if image}}
-        <figure>
-          <img class="center-image" src="{{image}}">
-        </figure>
-      {{/if}}
-    </header>
-
-    <div class="inner cover post post-body">
-      {{content}}
-    </div>
-
-    <hr style="margin-bottom:5px" />
-    <div class="inner cover post post-foot footer-info text-muted">
-
-      <div class="post-foot-left">
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
       </div>
+    </article>
 
-      <div class="post-foot-right">
-        Share this post:
-        <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
-           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-           onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');return false;">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="https://plus.google.com/share?url={{url absolute="true"}}"
-           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-          <i class="fa fa-google-plus-square"></i>
-        </a>
-      </div>
-    </div>
-  </article>
+    {{> "disqus"}}
 
-  {{> "disqus"}}
-
-{{/post}}
+  {{/post}}
+</section>

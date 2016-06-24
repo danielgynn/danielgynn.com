@@ -1,0 +1,41 @@
+.photography-section {
+  padding: .5vw;
+  font-size: 0;
+  margin: 0 2rem;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+
+  div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+
+    a img {
+      width: 100%;
+      height: auto;
+      transition: .1s transform;
+      transform: translateZ(0);
+    }
+  }
+
+  div:hover > a img {
+    transform: scale(1.2,1.2);
+    transition: .3s transform;
+  }
+
+  div:hover {
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .photography-section div { margin: 0; }
+  .photography-section { padding: 0; }
+}

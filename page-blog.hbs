@@ -1,35 +1,36 @@
 {{!< default}}
+<section class="wrap">
 
-<h1 class="page-title">Blog</h1>
+  <h1 class="page-title">Blog</h1>
 
-{{#post}}
-  {{content}}
-{{/post}}
+  {{#post}}
+    {{content}}
+  {{/post}}
 
-{{#get "posts" limit="all" include="author,tags, pagination"}}
+  {{#get "posts" limit="all" include="author,tags, pagination"}}
 
-  <hr>
+    <hr>
 
-  {{#foreach posts}}
-    <article class="{{post_class}}">
-
-      <section class="list-content">
-        <header class="cover post post-head">
-          <h1 class="cover-heading post-title"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
-          <section class="post-meta">
-            Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-            {{#if tags}}in {{tags separator=", "}}{{/if}}
+    {{#foreach posts}}
+      <article class="{{post_class}}">
+        <section class="list-content">
+          <header class="cover post post-head">
+            <h1 class="cover-heading post-title"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
+            <section class="post-meta">
+              Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+              {{#if tags}}in {{tags separator=", "}}{{/if}}
+            </section>
+          </header>
+          <section class="post-excerpt">
+            <div class="cover post post-body">
+              <p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
+            </div>
           </section>
-        </header>
-
-        <section class="post-excerpt">
-          <div class="cover post post-body">
-            <p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
-          </div>
         </section>
-      </section>
-      <hr>
-    </article>
-  {{/foreach}}
+        <hr>
+      </article>
+    {{/foreach}}
 
-{{/get}}
+  {{/get}}
+
+</section>
