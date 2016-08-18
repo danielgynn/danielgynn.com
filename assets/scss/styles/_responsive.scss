@@ -12,11 +12,35 @@
   }
 }
 
+@media (min-width: 600px) {
+  .site-nav {
+    display: block;
+  }
+
+  .hamburgler-icon-wrapper {
+    display: none;
+  }
+}
 
 @media (max-width: 600px) {
   .wrap {
     padding: 0 1rem;
   }
+
+  .site-nav {
+    display: none;
+  }
+
+  .hamburgler-icon-wrapper {
+    display: block;
+  }
+
+  .hero-overlay {
+    .page-title {
+      font-size: 3rem;
+    }
+  }
+
   img {
     padding: 0 -1rem;
   }
