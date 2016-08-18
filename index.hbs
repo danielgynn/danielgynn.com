@@ -1,24 +1,83 @@
 {{!< default}}
 
-<section class="wrap about-section">
+<header class="hero-overlay" style="background-image: url('{{@blog.cover}}')">
+  <div class="wrap">
+    <h1 class="page-title">Daniel Gynn</h1>
+    <h3>Frontend Web Developer</h1>
+  </div>
+</header>
 
-  <h1 class="page-title">About</h1>
-  <p>
-    Hey, I'm Daniel. I'm a front-end web developer based in Cambridge, UK. I <a href="/blog">write about</a> the things
-    I've been learning and some stuff that I've been working on.
-  </p>
-  <p>
-    I'm currently working at <a href="http://repositive.io" target="blank">Repositive</a>
-    in Cambridge as a Front-end Developer, building things with <a href="emberjs.com" target="_blank">Ember.js</a>.
-  </p>
-  <p>
-    When I'm not working, I'm usually taking <a href="/photography">photographs</a> of pretty much everything. I also like coffee and Radiohead. ☕️
-  </p>
-  <p>
-    Check me out on <a href="http://twitter.com/danielgynn">Twitter</a> 👊.
-  </p>
-  <figure>
-    <img class="center-image" src="{{@blog.cover}}">
-  </figure>
-
+<section class="wrap">
+  <h1 class="page-subtitle">Recent Blog Posts</h1>
+  {{#get "posts" limit="3" include="author,tags" filter="tag:learning"}}
+    {{#foreach posts}}
+      <article class="{{post_class}}">
+        <section class="list-content home-list">
+          <header class="cover post post-head">
+            <h5 class="cover-heading">
+              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+            </h5>
+          </header>
+          <section class="post-excerpt">
+            <div class="cover post post-body">
+              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+            </div>
+          </section>
+        </section>
+        <hr class="no-margin">
+      </article>
+    {{/foreach}}
+    <p><a href="/blog">Read more blog posts...</a></p>
+  {{/get}}
 </section>
+
+<hr>
+
+{{#get "posts" limit="3" include="author,tags" filter="tag:talks"}}
+  <section class="wrap">
+    <h1 class="page-subtitle">Recent Talks</h1>
+    {{#foreach posts}}
+      <article class="{{post_class}}">
+        <section class="list-content home-list">
+          <header class="cover post post-head">
+            <h5 class="cover-heading">
+              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+            </h5>
+          </header>
+          <section class="post-excerpt">
+            <div class="cover post post-body">
+              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+            </div>
+          </section>
+        </section>
+        <hr class="no-margin">
+      </article>
+    {{/foreach}}
+    <p><a href="/talks">See more talks...</a></p>
+  </section>
+  <hr>
+{{/get}}
+
+{{#get "posts" limit="3" include="author,tags" filter="tag:photography"}}
+  <section class="wrap">
+    <h1 class="page-subtitle">Recent Photography</h1>
+    {{#foreach posts}}
+      <article>
+        <section class="list-content home-list">
+          <header class="cover post post-head">
+            <h5 class="cover-heading">
+              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+            </h5>
+          </header>
+          <section class="post-excerpt">
+            <div class="cover post post-body">
+              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+            </div>
+          </section>
+        </section>
+        <hr class="no-margin">
+      </article>
+    {{/foreach}}
+    <p><a href="/photography">See more photography...</a></p>
+  </section>
+{{/get}}
