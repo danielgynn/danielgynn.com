@@ -1,13 +1,13 @@
 {{!< default}}
 <section class="wrap">
 
-  <h1 class="page-title">Blog</h1>
+  <h1 class="page-title">Blog Archive</h1>
 
   {{#post}}
     {{content}}
   {{/post}}
 
-  {{#get "posts" limit="all" include="author,tags, pagination"}}
+  {{#get "posts" limit="all" include="author,tags" filter="tag:learning"}}
 
     <hr>
 
