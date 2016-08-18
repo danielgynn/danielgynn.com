@@ -1,17 +1,31 @@
 {{!< default}}
-
 <section class="wrap">
+
   <h1 class="page-title">Photography</h1>
 
-  <p>Below is a selection of some of my favourite shots.</p>
-
-  <p>You can check out more of my photography at <a href="http://danielgynn.exposure.co">Exposure</a>,
-    <a href="http://instagram.com/danielgynn">Instagram]</a>, and <a href="https://www.flickr.com/photos/danielgynn/">Flickr</a>.
-  </p>
-</section>
-
-{{#post}}
-  <section class="photography-section">
+  {{#post}}
     {{content}}
-  </section>
-{{/post}}
+  {{/post}}
+
+  {{#get "posts" limit="all" include="author,tags" filter="tag:photography"}}
+
+    <hr>
+
+    {{#foreach posts}}
+      <article>
+        <section class="tag-photography">
+          <a class="pg-link-cover" href="https://danielgynn.exposure.co{{url}}" target="_blank"></a>
+          <div class="pg-cover" style="background-image: url('{{@image}}');"></div>
+          <div class="pg-content">
+            <div class="pg-meta">
+              <h1><a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a></h1>
+              <h3><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time></h3>
+            </div>
+          </div>
+        </section>
+      </article>
+    {{/foreach}}
+
+  {{/get}}
+
+</section>
