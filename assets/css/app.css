@@ -482,8 +482,18 @@ h6 {
   line-height: 1.45; }
 
 p {
-  line-height: 1.55;
-  margin: 15px 0; }
+  margin-bottom: 19px !important; }
+
+p,
+ul li {
+  margin: 0 auto;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  -webkit-font-smoothing: antialiased; }
 
 h1 {
   font-size: 2em; }
@@ -507,7 +517,7 @@ h1 {
   margin: .67em 0; }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 2rem; }
+  margin-top: 1rem; }
 
 .page-title {
   font-size: 2.5rem;
@@ -576,11 +586,9 @@ blockquote {
   background: #bf616a;
   color: #fff; }
 
-html {
-  background-color: #f5f5f5; }
-
+html,
 body {
-  background-color: #f5f5f5; }
+  background-color: #fff; }
 
 a,
 a:focus,
@@ -1028,3 +1036,9 @@ figure:hover figcaption {
       font-size: 1.8rem !important; }
     .pg-content .pg-meta h3 {
       font-size: .8rem !important; } }
+
+.resume h2 {
+  font-family: "Old Standard TT", serif;
+  font-style: italic;
+  border-bottom: 1px dotted #c2c2c2;
+  margin-top: 2rem; }

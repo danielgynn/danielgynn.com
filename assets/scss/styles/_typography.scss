@@ -30,8 +30,19 @@ h6 {
 }
 
 p {
-  line-height: 1.55;
-  margin: 15px 0;
+  margin-bottom: 19px !important;
+}
+
+p,
+ul li {
+  margin: 0 auto;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 { font-size: 2em; }
@@ -46,7 +57,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .page-title {
