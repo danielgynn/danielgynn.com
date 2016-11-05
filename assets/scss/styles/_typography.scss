@@ -5,12 +5,13 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 
 html,
 body {
   background-color: $color-white;
   font-family: $font-playfair;
-  font-size: 18px;
+  font-size: 17px;
   height: 100%;
 }
 
@@ -71,6 +72,10 @@ h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   font-family: $font-old-standard;
   font-style: italic;
+}
+
+.page-desc {
+  font-family: $font-julius;
 }
 
 /**

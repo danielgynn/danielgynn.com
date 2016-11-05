@@ -9,6 +9,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -465,7 +466,7 @@ html,
 body {
   background-color: #fff;
   font-family: "Playfair-Display", "Georgia", serif;
-  font-size: 18px;
+  font-size: 17px;
   height: 100%; }
 
 body {
@@ -529,6 +530,9 @@ h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   font-family: "Old Standard TT", serif;
   font-style: italic; }
+
+.page-desc {
+  font-family: "Julius Sans One", sans-serif; }
 
 /**
 * Colour social icons on hover.
@@ -688,6 +692,7 @@ figure:hover figcaption {
   margin-bottom: 2em;
   padding: 3em 0;
   clear: both;
+  background-color: #424242;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -781,7 +786,8 @@ figure:hover figcaption {
 .site-title {
   display: inline-block;
   font-family: "Playfair-Display", "Georgia", serif;
-  margin: 0; }
+  margin: 0;
+  border-bottom: 1px solid transparent; }
 
 .nav {
   font-family: "Roboto", "Helvetica-Neue", sans-serif;
