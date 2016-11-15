@@ -16,7 +16,7 @@
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: black;
+  background: $color-white;
   transition: all 0.2s ease
 }
 
@@ -49,7 +49,7 @@
 .hamburgler-active .hamburgler-icon,
 .hamburgler-active .hamburgler-icon:before,
 .hamburgler-active .hamburgler-icon:after {
-  background: white
+  background: $color-white;
 }
 
 .hamburgler-menu {

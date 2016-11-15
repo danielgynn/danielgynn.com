@@ -4,9 +4,6 @@
   .wrap {
     padding: 0 1rem;
   }
-  .site-header {
-    margin: 0 1rem;
-  }
   figure {
     padding: 0;
   }
@@ -45,9 +42,14 @@
     padding: 0 -1rem;
   }
   .site-header {
-    margin: 0 1rem;
-    display: inline-block;
-    text-align: center;
+    .nav-wrap {
+      margin: 0 1rem;
+      display: inline-block;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   figure.fw-image {
     background-size: contain;

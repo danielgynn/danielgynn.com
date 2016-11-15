@@ -730,8 +730,6 @@ figure:hover figcaption {
 @media (max-width: 780px) {
   .wrap {
     padding: 0 1rem; }
-  .site-header {
-    margin: 0 1rem; }
   figure {
     padding: 0; } }
 
@@ -752,10 +750,13 @@ figure:hover figcaption {
     font-size: 3rem; }
   img {
     padding: 0 -1rem; }
-  .site-header {
+  .site-header .nav-wrap {
     margin: 0 1rem;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
   figure.fw-image {
     background-size: contain; }
     figure.fw-image .full-width-image {
@@ -769,18 +770,21 @@ figure:hover figcaption {
     font-size: 1.2rem; } }
 
 .site-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0 1rem; }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  background-color: #424242; }
+  .site-header .nav-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0; }
   .site-header a {
     border: 0;
-    color: #424242; }
+    color: #bfbfbf; }
   .site-header a:hover {
-    color: #bf616a;
+    color: #fff;
     transition: color .3s linear, background-color .3s linear; }
   .site-header .site-title:hover {
-    border-bottom: 1px solid #bf616a;
+    border-bottom: 1px solid #fff;
     transition: border .8s ease; }
 
 .site-title {
@@ -788,6 +792,8 @@ figure:hover figcaption {
   font-family: "Playfair-Display", "Georgia", serif;
   margin: 0;
   border-bottom: 1px solid transparent; }
+  .site-title a {
+    color: #fff; }
 
 .nav {
   font-family: "Roboto", "Helvetica-Neue", sans-serif;
@@ -798,6 +804,40 @@ figure:hover figcaption {
     display: inline-block; }
     .nav li a:hover {
       background-color: transparent; }
+
+.tag-menu {
+  margin-bottom: 2rem; }
+  .tag-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+  .tag-menu li {
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 .5rem;
+    display: inline-block; }
+  .tag-menu a {
+    text-decoration: none;
+    display: block;
+    transition: .5s all ease;
+    color: #828282;
+    border-bottom: 2px solid transparent; }
+    .tag-menu a:hover {
+      border-bottom: 2px solid #bf616a;
+      color: #424242; }
+    .tag-menu a:active {
+      background-color: #e4bcc0;
+      cursor: default; }
+  @media screen and (min-width: 600px) {
+    .tag-menu li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+      display: inline-block; } }
 
 .hamburgler-icon-wrapper {
   position: absolute;
@@ -816,7 +856,7 @@ figure:hover figcaption {
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: black;
+  background: #fff;
   transition: all 0.2s ease; }
 
 .hamburgler-icon {
@@ -842,7 +882,7 @@ figure:hover figcaption {
 .hamburgler-active .hamburgler-icon,
 .hamburgler-active .hamburgler-icon:before,
 .hamburgler-active .hamburgler-icon:after {
-  background: white; }
+  background: #fff; }
 
 .hamburgler-menu {
   transition: all 0.4s ease;

@@ -1,23 +1,28 @@
 // Navigation
 
 .site-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  background-color: $color-tundora;
+
+  .nav-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+  }
 
   a {
     border: 0;
-    color: $color-tundora;
+    color: darken($color-white, 25%);
   }
 
   a:hover {
-    color: $color-contessa;
+    color: $color-white;
     transition: color .3s linear, background-color .3s linear;
   }
 
   .site-title:hover {
-    border-bottom: 1px solid $color-contessa;
+    border-bottom: 1px solid $color-white;
     transition: border .8s ease;
   }
 }
@@ -27,6 +32,10 @@
   font-family: $font-playfair;
   margin: 0;
   border-bottom: 1px solid transparent;
+
+  a {
+    color: $color-white;
+  }
 }
 
 .nav {
@@ -40,6 +49,55 @@
 
     a:hover {
       background-color: transparent;
+    }
+  }
+}
+
+.tag-menu {
+  margin-bottom: 2rem;
+
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    transition: .5s all ease;
+    color: lighten($color-tundora, 25%);
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid $color-contessa;
+      color: $color-tundora;
+    }
+
+    &:active {
+      background-color: lighten($color-contessa, 25%);
+      cursor: default;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+      display: inline-block;
+      // margin-right: -4px;
     }
   }
 }
