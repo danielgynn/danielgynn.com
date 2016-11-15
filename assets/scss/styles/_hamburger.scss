@@ -1,7 +1,7 @@
 .hamburgler-icon-wrapper {
   position: absolute;
   top: 1em;
-  right: 2em;
+  right: 1em;
   height: 26px;
   width: 26px;
   cursor: pointer;
@@ -17,7 +17,8 @@
   height: 2px;
   width: 26px;
   background: $color-white;
-  transition: all 0.2s ease
+  transition: all 0.2s ease;
+  left: 0;
 }
 
 .hamburgler-icon {
@@ -85,8 +86,13 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
 
-  li a {
-    color: $color-whitesmoke;
+  li {
+    margin: .5rem 0;
+
+    a {
+      color: $color-whitesmoke;
+      font-size: 1.5rem;
+    }
   }
 }
 
