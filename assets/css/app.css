@@ -838,6 +838,9 @@ figure:hover figcaption {
     .tag-menu a:active {
       background-color: #e4bcc0;
       cursor: default; }
+  .tag-menu .active-tag {
+    border-bottom: 2px solid #bf616a;
+    color: #424242; }
   @media screen and (min-width: 600px) {
     .tag-menu li {
       width: 120px;
