@@ -15,7 +15,9 @@
     {{content}}
   {{/post}}
 
-  {{#get "posts" limit="all" include="author,tags" filter="tag:books"}}
+  {{#get "posts" limit="all" include="author,tags" filter="tag:books" as |posts pages|}}
+
+    <p>A collection of <strong>{{pages.total}}</strong> post(s).</p>
 
     <hr>
 
