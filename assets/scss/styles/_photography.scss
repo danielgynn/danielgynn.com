@@ -84,6 +84,30 @@
   }
 }
 
+.photography-thumb {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  .post-text {
+    flex: 1 1 70%;
+    margin-right: .5rem;
+    align-self: flex-start;
+  }
+
+  .post-thumbnail {
+    flex: 1 1 30%;
+    border-bottom: none;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   .photography-section div { margin: 0; }
   .photography-section { padding: 0; }

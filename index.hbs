@@ -15,9 +15,10 @@
         <section class="list-content home-list">
           <header class="cover post post-head">
             <h5 class="cover-heading">
-              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+              <a class="post-title-link" href="{{url}}">{{{title}}}</a>
             </h5>
           </header>
+          <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
           <section class="post-excerpt">
             <div class="cover post post-body">
               <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
@@ -41,9 +42,10 @@
         <section class="list-content home-list">
           <header class="cover post post-head">
             <h5 class="cover-heading">
-              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+              <a class="post-title-link" href="{{url}}">{{{title}}}</a>
             </h5>
           </header>
+          <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
           <section class="post-excerpt">
             <div class="cover post post-body">
               <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
@@ -63,17 +65,17 @@
     <h1 class="page-subtitle">Recent Photography</h1>
     {{#foreach posts}}
       <article>
-        <section class="list-content home-list">
-          <header class="cover post post-head">
+        <section class="photography-thumb list-content home-list">
+          <div class="post-text">
             <h5 class="cover-heading">
-              <a class="post-title-link" href="{{url}}">{{{title}}}</a> - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMM YY'}}</time>
+              <a class="post-title-link" href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
             </h5>
-          </header>
-          <section class="post-excerpt">
-            <div class="cover post post-body">
-              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
-            </div>
-          </section>
+            <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
+            <p>{{excerpt words="22"}}<a class="read-more" href="https://danielgynn.exposure.co{{url}}" target="_blank">...</a></p>
+          </div>
+          <a class="post-thumbnail" href="https://danielgynn.exposure.co{{url}}" target="_blank">
+            <img src="{{image}}">
+          </a>
         </section>
         <hr class="no-margin">
       </article>

@@ -590,6 +590,14 @@ blockquote {
   background: #bf616a;
   color: #fff; }
 
+.time-blocks {
+  font-weight: 700;
+  letter-spacing: .075em;
+  font-family: "Roboto", "Helvetica-Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: 0; }
+
 html,
 body {
   background-color: #fff; }
@@ -1070,6 +1078,23 @@ figure:hover figcaption {
         letter-spacing: 1px;
         margin: 0;
         line-height: normal; }
+
+.photography-thumb {
+  display: flex;
+  align-items: center;
+  padding: 20px 0; }
+  .photography-thumb .post-text {
+    flex: 1 1 70%;
+    margin-right: .5rem;
+    align-self: flex-start; }
+  .photography-thumb .post-thumbnail {
+    flex: 1 1 30%;
+    border-bottom: none; }
+    .photography-thumb .post-thumbnail img {
+      display: block;
+      height: auto;
+      width: 100%;
+      cursor: pointer; }
 
 @media screen and (max-width: 600px) {
   .photography-section div {
