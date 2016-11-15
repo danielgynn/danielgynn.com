@@ -831,7 +831,8 @@ figure:hover figcaption {
     display: block;
     transition: .5s all ease;
     color: #828282;
-    border-bottom: 2px solid transparent; }
+    border-bottom: 2px solid transparent;
+    width: 100px; }
     .tag-menu a:hover {
       border-bottom: 2px solid #bf616a;
       color: #424242; }
