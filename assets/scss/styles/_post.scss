@@ -31,16 +31,19 @@
 
 .post-title {
   font-weight: 300;
-    margin: .63em 0 0;
-    font-size: 1.9rem;
-    a {
-      color: $color-tundora;
-      border: none;
-    }
-    a:hover {
-      color: $color-contessa;
-      text-decoration: none;
-    }
+  margin: .63em 0 0;
+  font-size: 1.9rem;
+
+  a {
+    color: $color-tundora;
+    border: none;
+    transition: color 0.5s ease;
+  }
+
+  a:hover {
+    color: $color-contessa;
+    text-decoration: none;
+  }
 }
 .post-meta {
   font-family: $font-bitter;
@@ -105,4 +108,15 @@
     right: 0;
     width: 35%;
     margin-right: 20px;
+}
+
+.mini-post-header {
+  a {
+    color: $color-contessa;
+    transition: all .5s ease;
+
+    &:hover {
+      color: lighten($color-contessa, 15%);
+    }
+  }
 }

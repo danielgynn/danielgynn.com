@@ -958,7 +958,8 @@ figure:hover figcaption {
   font-size: 1.9rem; }
   .post-title a {
     color: #424242;
-    border: none; }
+    border: none;
+    transition: color 0.5s ease; }
   .post-title a:hover {
     color: #bf616a;
     text-decoration: none; }
@@ -1012,6 +1013,12 @@ figure:hover figcaption {
   right: 0;
   width: 35%;
   margin-right: 20px; }
+
+.mini-post-header a {
+  color: #bf616a;
+  transition: all .5s ease; }
+  .mini-post-header a:hover {
+    color: #d5979d; }
 
 .tag-photography {
   margin: 1rem auto;

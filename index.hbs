@@ -13,16 +13,12 @@
     {{#foreach posts}}
       <article class="{{post_class}}">
         <section class="list-content home-list">
-          <header class="cover post post-head">
-            <h5 class="cover-heading">
-              <a class="post-title-link" href="{{url}}">{{{title}}}</a>
-            </h5>
-          </header>
+          <h5 class="mini-post-header">
+            <a href="{{url}}">{{{title}}}</a>
+          </h5>
           <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
           <section class="post-excerpt">
-            <div class="cover post post-body">
-              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
-            </div>
+            <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
           </section>
         </section>
         <hr class="no-margin">
@@ -40,16 +36,12 @@
     {{#foreach posts}}
       <article class="{{post_class}}">
         <section class="list-content home-list">
-          <header class="cover post post-head">
-            <h5 class="cover-heading">
-              <a class="post-title-link" href="{{url}}">{{{title}}}</a>
-            </h5>
-          </header>
+          <h5 class="mini-post-header">
+            <a href="{{url}}">{{{title}}}</a>
+          </h5>
           <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
           <section class="post-excerpt">
-            <div class="cover post post-body">
-              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
-            </div>
+            <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
           </section>
         </section>
         <hr class="no-margin">
@@ -67,8 +59,8 @@
       <article>
         <section class="photography-thumb list-content home-list">
           <div class="post-text">
-            <h5 class="cover-heading">
-              <a class="post-title-link" href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
+            <h5 class="mini-post-header">
+              <a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
             </h5>
             <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
             <p>{{excerpt words="22"}}<a class="read-more" href="https://danielgynn.exposure.co{{url}}" target="_blank">...</a></p>
