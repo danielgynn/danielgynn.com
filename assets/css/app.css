@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -568,20 +567,19 @@ h2, h3, h4, h5, h6 {
   font-family: "Bitter", "Georgia", serif; }
 
 blockquote {
-  border-left: 8px solid #bf616a;
-  margin: 1.5em 10px;
-  padding: .5em 10px;
-  quotes: "“" "”" "‘" "’"; }
+  border-left: 5px solid #bf616a;
+  margin: 1.5em .5rem;
+  padding: .5em 1rem;
+  font-style: italic; }
   blockquote::before {
     color: #bf616a;
-    content: open-quote;
+    content: '\201C';
     font-size: 5rem;
     line-height: .1em;
-    margin-right: .25em;
+    margin-right: .15em;
     vertical-align: -.4em; }
   blockquote p {
-    display: inline;
-    font-size: 1.8rem; }
+    display: inline; }
 
 .text-center {
   text-align: center; }
@@ -771,13 +769,14 @@ figure:hover figcaption {
       height: auto; }
   .post h1,
   .post .blog-post-title {
-    font-size: 1.5rem !important; }
+    font-size: 1.8rem !important;
+    margin: 1rem 0 !important; }
   .post h2 {
     font-size: 1.3rem; }
   .post h3 {
     font-size: 1.2rem; }
   .tag-menu a {
-    width: 70px !important;
+    width: 75px !important;
     font-size: 1rem; } }
 
 .site-header {
@@ -834,14 +833,16 @@ figure:hover figcaption {
     display: block;
     transition: .5s all ease;
     color: #828282;
-    border-bottom: 2px solid transparent;
-    width: 100px; }
+    border: 2px solid transparent;
+    border-radius: 2px;
+    width: 120px; }
     .tag-menu a:hover {
       border-bottom: 2px solid #bf616a;
       color: #424242; }
     .tag-menu a:active {
       background-color: #e4bcc0;
-      cursor: default; }
+      cursor: default;
+      border: 2px solid #bf616a; }
   .tag-menu .active-tag {
     border-bottom: 2px solid #bf616a;
     color: #424242; }
@@ -943,11 +944,19 @@ figure:hover figcaption {
   text-align: left;
   max-width: 100%; }
 
+.post-header {
+  height: 300px; }
+  .post-header .hero-overlay {
+    height: 100%; }
+
 .blog-post .post-title {
   font-size: 2.2rem;
   text-align: center;
   letter-spacing: -1px;
   font-weight: 300; }
+
+.blog-post .page-title {
+  margin: 3rem 0 0; }
 
 .blog-post .post-meta {
   text-align: center; }
@@ -969,7 +978,6 @@ figure:hover figcaption {
   font-size: 1.9rem; }
   .post-title a {
     color: #424242;
-    border: none;
     transition: color 0.5s ease; }
   .post-title a:hover {
     color: #bf616a;
@@ -983,6 +991,10 @@ figure:hover figcaption {
   text-transform: uppercase; }
   .post-meta i {
     color: #c0c0c0; }
+
+.blog-blocks {
+  color: #424242;
+  margin: .5rem 0; }
 
 .tag {
   background-color: #424242; }
@@ -1046,8 +1058,8 @@ figure:hover figcaption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: opacity 0.4s ease;
-  opacity: 1; }
+  transition: opacity 0.6s ease;
+  opacity: .9; }
   .tag-photography:hover {
     opacity: .7; }
   .tag-photography .pg-link-cover {
@@ -1065,7 +1077,7 @@ figure:hover figcaption {
     width: 100%;
     height: 100%;
     background-size: cover !important; }
-  .tag-photography .pg-content {
+  .tag-photography .pg-content a {
     top: initial;
     bottom: 0;
     height: auto;
@@ -1074,25 +1086,23 @@ figure:hover figcaption {
     color: #fff;
     text-align: center;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, transparent 1%, rgba(0, 0, 0, 0.05) 26%, rgba(0, 0, 0, 0.5) 71%, rgba(0, 0, 0, 0.7) 100%); }
-    .tag-photography .pg-content .pg-meta {
+    .tag-photography .pg-content a .pg-meta {
       position: relative;
+      top: 135px;
       z-index: 3;
       width: 90%;
       margin: 0 auto;
       color: #fff; }
-      .tag-photography .pg-content .pg-meta h1 a {
+      .tag-photography .pg-content a .pg-meta h1 {
         color: #fff !important;
         font-family: "Old Standard TT", serif;
         font-style: italic;
-        font-size: 3.5rem;
-        transition: opacity .4s ease; }
-        .tag-photography .pg-content .pg-meta h1 a:hover {
-          opacity: .7; }
-      .tag-photography .pg-content .pg-meta h3 {
+        font-size: 3.5rem; }
+      .tag-photography .pg-content a .pg-meta h3 {
         color: #fff;
         font-size: 1rem; }
-      .tag-photography .pg-content .pg-meta h1,
-      .tag-photography .pg-content .pg-meta h3 {
+      .tag-photography .pg-content a .pg-meta h1,
+      .tag-photography .pg-content a .pg-meta h3 {
         letter-spacing: 1px;
         margin: 0;
         line-height: normal; }
@@ -1119,12 +1129,16 @@ figure:hover figcaption {
     margin: 0; }
   .photography-section {
     padding: 0; }
-  .pg-content {
+  .tag-photography {
+    height: 200px; }
+  .pg-content a {
     padding: 30% 0 5% 0 !important; }
-    .pg-content .pg-meta h1 a {
-      font-size: 1.8rem !important; }
-    .pg-content .pg-meta h3 {
-      font-size: .8rem !important; } }
+    .pg-content a .pg-meta {
+      top: 85px !important; }
+      .pg-content a .pg-meta h1 {
+        font-size: 1.8rem !important; }
+      .pg-content a .pg-meta h3 {
+        font-size: .8rem !important; } }
 
 .resume h2 {
   font-family: "Old Standard TT", serif;

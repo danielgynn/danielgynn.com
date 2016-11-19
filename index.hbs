@@ -57,19 +57,18 @@
     <h1 class="page-subtitle">Recent Photography</h1>
     {{#foreach posts}}
       <article>
-        <section class="photography-thumb list-content home-list">
-          <div class="post-text">
-            <h5 class="mini-post-header">
-              <a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
-            </h5>
-            <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
-            <p>{{excerpt words="22"}}<a class="read-more" href="https://danielgynn.exposure.co{{url}}" target="_blank">...</a></p>
+        <section class="tag-photography">
+          <a class="pg-link-cover" href="https://danielgynn.exposure.co{{url}}" target="_blank"></a>
+          <div class="pg-cover" style="background-image: url('{{@image}}');"></div>
+          <div class="pg-content">
+            <a href="https://danielgynn.exposure.co{{url}}" target="_blank">
+              <div class="pg-meta">
+                <h1>{{{title}}}</h1>
+                <h3><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time></h3>
+              </div>
+            </a>
           </div>
-          <a class="post-thumbnail" href="https://danielgynn.exposure.co{{url}}" target="_blank">
-            <img src="{{image}}">
-          </a>
         </section>
-        <hr class="no-margin">
       </article>
     {{/foreach}}
     <p><a href="/photography">See more photography...</a></p>

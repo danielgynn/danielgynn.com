@@ -26,9 +26,8 @@
         <section class="list-content">
           <header class="cover post post-head">
             <h1 class="cover-heading post-title"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
-            <section class="post-meta">
-              Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-              {{#if tags}}in {{tags separator=", "}}{{/if}}
+            <section class="blog-blocks">
+    					<span class="time-blocks">Posted on <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time> {{#if tags}}in {{tags separator=", "}}{{/if}}</span>
             </section>
           </header>
           <section class="post-excerpt">

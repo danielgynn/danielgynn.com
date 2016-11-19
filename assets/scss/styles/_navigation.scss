@@ -76,8 +76,9 @@
     display: block;
     transition: .5s all ease;
     color: lighten($color-tundora, 25%);
-    border-bottom: 2px solid transparent;
-    width: 100px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    width: 120px;
 
     &:hover {
       border-bottom: 2px solid $color-contessa;
@@ -87,6 +88,7 @@
     &:active {
       background-color: lighten($color-contessa, 25%);
       cursor: default;
+      border: 2px solid $color-contessa;
     }
   }
 

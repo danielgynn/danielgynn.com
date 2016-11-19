@@ -3,6 +3,14 @@
     max-width: 100%;
 }
 
+.post-header {
+  height: 300px;
+
+  .hero-overlay {
+    height: 100%;
+  }
+}
+
 .blog-post {
 
   .post-title {
@@ -10,6 +18,10 @@
     text-align: center;
     letter-spacing: -1px;
     font-weight: 300;
+  }
+
+  .page-title {
+    margin: 3rem 0 0;
   }
 
   .post-meta {
@@ -36,7 +48,6 @@
 
   a {
     color: $color-tundora;
-    border: none;
     transition: color 0.5s ease;
   }
 
@@ -54,6 +65,11 @@
   i {
     color: $color-silver;
   }
+}
+
+.blog-blocks {
+  color: $color-tundora;
+  margin: .5rem 0;
 }
 
 .tag {

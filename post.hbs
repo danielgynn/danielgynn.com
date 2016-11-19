@@ -1,9 +1,18 @@
 {{!< default}}
+{{#post}}
+
+{{#if image}}
+  <header class="post-header">
+    <div class="hero-overlay" style="background-image: url('{{image}}')"></div>
+  </header>
+{{/if}}
+
 <section class="wrap">
-  {{#post}}
+
     <article class="{{post_class}} blog-post">
+
       <header class="inner cover post post-head">
-        <h1 class="cover-heading post-title blog-post-title">{{{title}}}</h1>
+        <h1 class="page-title">{{{title}}}</h1>
         <section class="post-meta">
           <hr>
           <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on
@@ -15,11 +24,7 @@
           <hr>
         </section>
 
-        {{#if image}}
-          <figure>
-            <img class="center-image" src="{{image}}">
-          </figure>
-        {{/if}}
+
       </header>
 
       <div class="inner cover post post-body">
