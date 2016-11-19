@@ -767,6 +767,8 @@ figure:hover figcaption {
     background-size: contain; }
     figure.fw-image .full-width-image {
       height: auto; }
+  .post-header {
+    height: 150px !important; }
   .post h1,
   .post .blog-post-title {
     font-size: 1.8rem !important;
