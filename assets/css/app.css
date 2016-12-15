@@ -716,13 +716,6 @@ figure:hover figcaption {
   margin-left: auto;
   margin-right: auto; }
 
-.selfie {
-  cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.5s linear; }
-  .selfie:hover {
-    opacity: 0.8; }
-
 .no-margin {
   margin: 0 !important; }
 
