@@ -816,6 +816,9 @@ figure:hover figcaption {
     display: inline-block; }
     .nav li a:hover {
       background-color: transparent; }
+  .nav .active a {
+    color: #fff;
+    transition: all ease .8s; }
 
 .tag-menu {
   margin-bottom: 2rem; }
@@ -941,6 +944,35 @@ figure:hover figcaption {
 
 .hamburgler-active .hamburgler-menu-list {
   transform: translate(-50%, -50%) scale(1); }
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  /* Dimensions */
+  width: 100%;
+  height: 2px;
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+  /* Progress bar container for Firefox/IE10+ */
+  background-color: transparent;
+  /* Progress bar value for IE10+ */
+  color: #bf616a; }
+
+progress::-webkit-progress-bar {
+  background-color: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: #bf616a; }
+
+progress::-moz-progress-bar {
+  background-color: #bf616a; }
 
 .post {
   text-align: left;
