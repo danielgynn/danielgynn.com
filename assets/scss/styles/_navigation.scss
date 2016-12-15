@@ -47,8 +47,17 @@
   li {
     display: inline-block;
 
-    a:hover {
-      background-color: transparent;
+    a {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .active {
+    a {
+      color: $color-white;
+      transition: all ease .8s;
     }
   }
 }

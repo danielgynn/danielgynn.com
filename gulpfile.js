@@ -1,9 +1,9 @@
-var gulp     = require('gulp'),
-  sass     = require('gulp-sass'),
-  autoprefix = require('gulp-autoprefixer'),
-  jshint     = require('gulp-jshint'),
-  stylish    = require('jshint-stylish'),
-  concat     = require('gulp-concat');
+var gulp       = require('gulp'),
+    sass       = require('gulp-sass'),
+    autoprefix = require('gulp-autoprefixer'),
+    jshint     = require('gulp-jshint'),
+    stylish    = require('jshint-stylish'),
+    concat     = require('gulp-concat');
 
 gulp.task('css', function() {
   return gulp.src('./bower_components/prism/themes/prism.css')
