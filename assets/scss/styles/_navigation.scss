@@ -3,6 +3,10 @@
 .site-header {
   box-shadow: 0 0 10px rgba(0, 0, 0, .6);
   background-color: $color-tundora;
+  z-index: 1000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
 
   .nav-wrap {
     align-items: center;

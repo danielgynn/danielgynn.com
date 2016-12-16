@@ -510,6 +510,7 @@ h6 {
 
 .page-title {
   font-size: 2.5rem;
+  padding-top: 3rem;
   font-family: "Old Standard TT", serif;
   text-align: center;
   font-style: italic; }
@@ -585,6 +586,17 @@ blockquote {
 html,
 body {
   background-color: #fff; }
+
+main {
+  margin-top: 67px; }
+  main section.wrap {
+    margin: 1.5rem auto; }
+
+.hamburgler-active .site-header {
+  position: initial !important; }
+
+.hamburgler-active main {
+  margin-top: 0; }
 
 a,
 a:focus,
@@ -724,6 +736,8 @@ figure:hover figcaption {
     display: none; } }
 
 @media (max-width: 600px) {
+  main {
+    margin-top: 57px; }
   .wrap {
     padding: 0 1rem; }
   .site-nav {
@@ -761,7 +775,11 @@ figure:hover figcaption {
 
 .site-header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  background-color: #424242; }
+  background-color: #424242;
+  z-index: 1000000;
+  position: fixed;
+  width: 100%;
+  top: 0; }
   .site-header .nav-wrap {
     align-items: center;
     display: flex;
@@ -845,7 +863,7 @@ figure:hover figcaption {
   height: 26px;
   width: 26px;
   cursor: pointer;
-  z-index: 1000001; }
+  z-index: 1000002; }
 
 .hamburgler-icon,
 .hamburgler-icon::before,
@@ -888,7 +906,7 @@ figure:hover figcaption {
   transition: all .4s ease;
   opacity: 0;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -900,16 +918,12 @@ figure:hover figcaption {
   overflow: hidden;
   z-index: 1000000; }
 
-.hamburgler-active .hamburgler-menu {
-  opacity: 1;
-  pointer-events: initial; }
-
 .hamburgler-menu-list {
   display: block;
   transition: all .4s ease;
   padding: 0;
   list-style-type: none;
-  position: absolute;
+  position: fixed;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2); }
@@ -917,10 +931,18 @@ figure:hover figcaption {
     margin: .5rem 0; }
     .hamburgler-menu-list li a {
       color: #f5f5f5;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      border-bottom: 0; }
+
+.hamburgler-active .hamburgler-menu {
+  opacity: 1;
+  pointer-events: initial; }
 
 .hamburgler-active .hamburgler-menu-list {
   transform: translate(-50%, -50%) scale(1); }
+
+.hamburgler-active .hamburgler-icon-wrapper {
+  position: fixed; }
 
 progress {
   position: fixed;
@@ -961,7 +983,7 @@ progress::-moz-progress-bar {
   font-weight: 300; }
 
 .blog-post .page-title {
-  margin: 3rem 0 0; }
+  margin: -2rem 0 0 !important; }
 
 .blog-post .post-meta {
   text-align: center; }

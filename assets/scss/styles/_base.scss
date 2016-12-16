@@ -4,6 +4,24 @@ body {
   background-color: $color-white;
 }
 
+main {
+  margin-top: 67px;
+
+  section.wrap {
+    margin: 1.5rem auto;
+  }
+}
+
+.hamburgler-active {
+  .site-header {
+    position: initial !important;
+  }
+
+  main {
+    margin-top: 0;
+  }
+}
+
 a,
 a:focus,
 a:hover {
