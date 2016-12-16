@@ -1,0 +1,19 @@
+scss_files: 'assets/scss/**/*.scss'
+
+linters:
+  PropertySortOrder:
+    enabled: false
+  VendorPrefix:
+    enabled: false
+  ImportantRule:
+    enabled: false
+  Indentation:
+    enabled: false
+  IdSelector:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  SelectorDepth:
+    enabled: false

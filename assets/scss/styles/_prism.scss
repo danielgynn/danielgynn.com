@@ -1,21 +1,17 @@
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+scss+bash */
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
+// http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+scss+bash */
+//
+// okaidia theme for JavaScript, CSS and HTML
+// Loosely based on Monokai textmate theme by http://www.monokai.nl/
+// @author ocodia
 
 code[class*="language-"],
 pre[class*="language-"] {
-	font-size: 0.7rem;
+	font-size: .7rem;
 	color: #f8f8f2;
-	text-shadow: 0 1px rgba(0,0,0,0.3);
+	text-shadow: 0 1px rgba(0, 0, 0, .3);
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	direction: ltr;
 	text-align: left;
-	// white-space: pre;
-	// word-spacing: normal;
-	// word-break: normal;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -27,12 +23,12 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-/* Code blocks */
+// Code blocks
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
+	border-radius: .3em;
 }
 
 :not(pre) > code[class*="language-"],
@@ -40,7 +36,7 @@ pre[class*="language-"] {
 	background: #3f3f3f;
 }
 
-/* Inline code */
+// Inline code
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
@@ -69,7 +65,7 @@ pre[class*="language-"] {
 }
 
 .token.boolean,
-.token.number{
+.token.number {
 	color: #e78c45;
 }
 
@@ -91,14 +87,13 @@ pre[class*="language-"] {
 }
 
 .token.atrule,
-.token.attr-value
-{
+.token.attr-value {
 	color: #b9ca4a;
 }
 
 
-.token.keyword{
-color: #c397d8;
+.token.keyword {
+	color: #c397d8;
 }
 
 .token.regex,
@@ -115,9 +110,9 @@ color: #c397d8;
 }
 
 code {
-    white-space: pre-wrap;       /* CSS 3 */
-    white-space: -moz-pre-wrap;  /* Mozilla */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* IE 5.5+ */
+  white-space: pre-wrap;       // CSS 3
+  white-space: -moz-pre-wrap;  // Mozilla
+  white-space: -pre-wrap;      // Opera 4-6
+  white-space: -o-pre-wrap;    // Opera 7
+  word-wrap: break-word;       // IE 5.5+
 }

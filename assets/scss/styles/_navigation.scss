@@ -1,7 +1,7 @@
 // Navigation
 
 .site-header {
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
   background-color: $color-tundora;
 
   .nav-wrap {
@@ -109,12 +109,11 @@
   @media screen and (min-width: 600px) {
     li {
       width: 120px;
-      border-bottom: none;
+      border-bottom: 0;
       height: 50px;
       line-height: 50px;
       font-size: 1.4em;
       display: inline-block;
-      // margin-right: -4px;
     }
   }
 }

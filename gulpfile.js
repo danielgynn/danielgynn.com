@@ -5,11 +5,6 @@ var gulp       = require('gulp'),
     stylish    = require('jshint-stylish'),
     concat     = require('gulp-concat');
 
-gulp.task('css', function() {
-  return gulp.src('./bower_components/prism/themes/prism.css')
-  .pipe(gulp.dest('./assets/css'));
-});
-
 gulp.task('styles', function() {
   gulp.src('./assets/scss/app.scss')
   .pipe(sass({
@@ -35,7 +30,7 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter('jshint-stylish'))
 });
 
-gulp.task('default', ['css', 'styles', 'scripts'], function() {
-  gulp.watch('./assets/scss/**/*.scss', ['css', 'styles']);
+gulp.task('default', ['styles', 'scripts'], function() {
+  gulp.watch('./assets/scss/**/*.scss', ['styles']);
   gulp.watch('./assets/js/**/*.js', ['scripts', 'jshint']);
 });

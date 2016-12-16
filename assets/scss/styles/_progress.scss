@@ -1,27 +1,27 @@
 // From https://css-tricks.com/reading-position-indicator/
 progress {
-  /* Positioning */
+  // Positioning
   position: fixed;
   left: 0;
   top: 0;
   z-index: 10000;
 
-  /* Dimensions */
+  // Dimensions
   width: 100%;
   height: 2px;
 
-  /* Reset the appearance */
+  // Reset the appearance
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 
-  /* Get rid of the default border in Firefox/Opera. */
-  border: none;
+  // Get rid of the default border in Firefox/Opera.
+  border: 0;
 
-  /* Progress bar container for Firefox/IE10+ */
+  // Progress bar container for Firefox/IE10+
   background-color: transparent;
 
-  /* Progress bar value for IE10+ */
+  // Progress bar value for IE10+
   color: $color-contessa;
 }
 

@@ -46,18 +46,22 @@ ul li {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 { font-size: 2em; }
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
 h2 { font-size: 1.8em; }
 h3 { font-size: 1.6em; }
 h4 { font-size: 1.2em; }
 h5 { font-size: 1em; }
 h6 { font-size: .8em; }
 
-h1 {
-  margin: .67em 0;
-}
-
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 1rem;
 }
 
@@ -78,35 +82,41 @@ h2, h3, h4, h5, h6 {
   font-family: $font-julius;
 }
 
-/**
-* Colour social icons on hover.
-*/
+// Colour social icons on hover.
 .fa-facebook:hover {
-    color: #3b5998;
+  color: #3b5998;
 }
+
 .fa-twitter:hover {
-    color: #55acee;
+  color: #55acee;
 }
+
 .fa-comments:hover {
   color: $color-contessa;
 }
+
 .fa-linkedin:hover {
-    color: #0077b5;
+  color: #0077b5;
 }
+
 .fa-github:hover {
-    color: #333333;
+  color: #333;
 }
+
 .fa-instagram:hover {
   color: #35729b;
 }
+
 .fa-flickr:hover {
   color: #ff0084;
 }
+
 .fa-rss:hover {
-    color: #f26522;
+  color: #f26522;
 }
+
 .fa-google-plus-square:hover {
-    color: #dd4b39;
+  color: #dd4b39;
 }
 
 .bitter-font {

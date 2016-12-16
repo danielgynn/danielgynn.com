@@ -1,6 +1,6 @@
 // Vendors
 @import 'styles/normalize';
-@import 'styles/prism'; // Styles for code blocks.
+@import 'styles/prism';
 
 // Base styles
 @import 'styles/variables';
@@ -9,11 +9,11 @@
 @import 'styles/responsive';
 
 // Component-specific styles
-@import 'styles/navigation'; // Navbar
+@import 'styles/navigation';
 @import 'styles/hamburger';
 @import 'styles/progress';
 
 // Post-specific styles
-@import 'styles/post'; // Blog posts
+@import 'styles/post';
 @import 'styles/photography';
 @import 'styles/resume';
