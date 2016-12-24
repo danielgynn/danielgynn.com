@@ -771,7 +771,14 @@ figure:hover figcaption {
     font-size: 1.2rem; }
   .tag-menu a {
     width: 75px !important;
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .tag-menu li {
+    width: 120px;
+    border-bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    display: inline-block; } }
 
 .site-header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -817,44 +824,34 @@ figure:hover figcaption {
     transition: all ease .8s; }
 
 .tag-menu {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.2rem; }
   .tag-menu ul {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0; }
   .tag-menu li {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 40px;
-    height: 40px;
-    margin: 0 .5rem;
+    height: 30px;
+    margin: 0 .4rem;
     display: inline-block; }
   .tag-menu a {
     text-decoration: none;
     display: block;
     transition: .5s all ease;
     color: #828282;
-    border: 2px solid transparent;
-    border-radius: 2px;
-    width: 120px; }
+    border-bottom: 2px solid transparent;
+    width: 100px; }
     .tag-menu a:hover {
-      border-bottom: 2px solid #bf616a;
+      border-bottom: 2px solid #e4bcc0;
       color: #424242; }
     .tag-menu a:active {
-      background-color: #e4bcc0;
       cursor: default;
-      border: 2px solid #bf616a; }
+      border-bottom: 2px solid #bf616a; }
   .tag-menu .active-tag {
     border-bottom: 2px solid #bf616a;
     color: #424242; }
-  @media screen and (min-width: 600px) {
-    .tag-menu li {
-      width: 120px;
-      border-bottom: 0;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.4em;
-      display: inline-block; } }
 
 .hamburgler-icon-wrapper {
   position: absolute;

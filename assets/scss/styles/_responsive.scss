@@ -90,5 +90,14 @@
       width: 75px !important;
       font-size: 1rem;
     }
+
+      li {
+        width: 120px;
+        border-bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        display: inline-block;
+      }
   }
 }

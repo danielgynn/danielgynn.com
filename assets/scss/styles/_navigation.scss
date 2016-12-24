@@ -67,7 +67,7 @@
 }
 
 .tag-menu {
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 
   ul {
     list-style: none;
@@ -77,10 +77,10 @@
   }
 
   li {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 40px;
-    height: 40px;
-    margin: 0 .5rem;
+    height: 30px;
+    margin: 0 .4rem;
     display: inline-block;
   }
 
@@ -89,35 +89,22 @@
     display: block;
     transition: .5s all ease;
     color: lighten($color-tundora, 25%);
-    border: 2px solid transparent;
-    border-radius: 2px;
-    width: 120px;
+    border-bottom: 2px solid transparent;
+    width: 100px;
 
     &:hover {
-      border-bottom: 2px solid $color-contessa;
+      border-bottom: 2px solid lighten($color-contessa, 25%);
       color: $color-tundora;
     }
 
     &:active {
-      background-color: lighten($color-contessa, 25%);
       cursor: default;
-      border: 2px solid $color-contessa;
+      border-bottom: 2px solid $color-contessa;
     }
   }
 
   .active-tag {
     border-bottom: 2px solid $color-contessa;
     color: $color-tundora;
-  }
-
-  @media screen and (min-width: 600px) {
-    li {
-      width: 120px;
-      border-bottom: 0;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.4em;
-      display: inline-block;
-    }
   }
 }
