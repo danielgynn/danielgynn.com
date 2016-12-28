@@ -523,6 +523,13 @@ h6 {
 .page-desc {
   font-family: "Julius Sans One", sans-serif; }
 
+.tag-books .post h2,
+.tag-books .post h3,
+.tag-books .post h4,
+.tag-books .post h5 {
+  font-family: "Old Standard TT", serif !important;
+  font-style: italic; }
+
 .fa-facebook:hover {
   color: #3b5998; }
 

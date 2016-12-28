@@ -83,6 +83,18 @@ h6 {
   font-family: $font-julius;
 }
 
+.tag-books {
+  .post {
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: $font-old-standard !important;
+      font-style: italic;
+    }
+  }
+}
+
 // Colour social icons on hover.
 .fa-facebook:hover {
   color: #3b5998;
