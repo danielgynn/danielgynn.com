@@ -12,7 +12,9 @@
         // for better relative/absolute positioning.
 
         //$("#blog-logo").prependTo("#site-head-content");
-        $("header.site-header").autoHidingNavbar();
+        $("header.site-header").autoHidingNavbar({
+          'animationDuration': 500
+        });
 
     });
 
