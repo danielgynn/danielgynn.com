@@ -1168,6 +1168,16 @@ progress::-moz-progress-bar {
       width: 100%;
       cursor: pointer; }
 
+.inline-images img {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin: 1rem 0 2rem; }
+  .inline-images img:first-child {
+    padding-right: .25rem; }
+  .inline-images img:last-child {
+    padding-left: .25rem; }
+
 @media screen and (max-width: 600px) {
   .photography-section div {
     margin: 0; }

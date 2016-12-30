@@ -102,6 +102,23 @@
   }
 }
 
+.inline-images {
+  img {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin: 1rem 0 2rem;
+
+    &:first-child {
+      padding-right: .25rem;
+    }
+
+    &:last-child {
+      padding-left: .25rem;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   .photography-section div { margin: 0; }
   .photography-section { padding: 0; }
