@@ -59,7 +59,21 @@
     height: 150px !important;
   }
 
+  .site-footer {
+    padding: 1.4rem 0;
+
+    .footer-container {
+      font-size: .8rem;
+    }
+  }
+
   .post {
+    .post-meta {
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+
     h1,
     .blog-post-title {
       font-size: 1.8rem !important;

@@ -789,6 +789,12 @@ figure:hover figcaption {
       height: auto; }
   .post-header {
     height: 150px !important; }
+  .site-footer {
+    padding: 1.4rem 0; }
+    .site-footer .footer-container {
+      font-size: .8rem; }
+  .post .post-meta p {
+    margin-bottom: 0 !important; }
   .post h1,
   .post .blog-post-title {
     font-size: 1.8rem !important;
@@ -1008,6 +1014,10 @@ progress::-moz-progress-bar {
 
 .blog-post .post-meta {
   text-align: center; }
+  .blog-post .post-meta p,
+  .blog-post .post-meta section {
+    margin-bottom: 0 !important;
+    line-height: 30px; }
 
 .blog-post p:first-child::first-letter {
   color: #bf616a;
