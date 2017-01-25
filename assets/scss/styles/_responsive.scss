@@ -13,15 +13,13 @@
   .site-nav {
     display: block;
   }
-
-  .hamburgler-icon-wrapper {
-    display: none;
-  }
 }
 
 @media (max-width: 600px) {
-  main {
-    margin-top: 57px;
+  .index-page {
+    hr {
+      margin: 0 1rem;
+    }
   }
 
   .wrap {
@@ -29,10 +27,6 @@
   }
 
   .site-nav {
-    display: none;
-  }
-
-  .hamburgler-icon-wrapper {
     display: block;
   }
 
@@ -48,12 +42,8 @@
 
   .site-header {
     .nav-wrap {
-      margin: 0 1rem;
       display: inline-block;
       text-align: center;
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
     }
   }
 

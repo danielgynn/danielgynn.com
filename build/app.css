@@ -474,9 +474,7 @@ p {
 p,
 ul li {
   margin: 0 auto;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
+  font-variant: normal;
   font-weight: normal;
   font-stretch: normal;
   line-height: 30px;
@@ -508,9 +506,17 @@ h5,
 h6 {
   margin-top: 1rem; }
 
+.intro-header {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica-Neue", sans-serif;
+  font-size: 1.5rem;
+  text-align: center; }
+
 .page-title {
   font-size: 2.5rem;
-  padding-top: 3rem;
+  padding-top: 0;
+  font-weight: 900;
   font-family: "Old Standard TT", serif;
   text-align: center;
   font-style: italic; }
@@ -520,15 +526,16 @@ h6 {
   font-family: "Old Standard TT", serif;
   font-style: italic; }
 
-.page-desc {
-  font-family: "Julius Sans One", sans-serif; }
-
 .tag-books .post h2,
 .tag-books .post h3,
 .tag-books .post h4,
 .tag-books .post h5 {
   font-family: "Old Standard TT", serif !important;
   font-style: italic; }
+
+.fa {
+  color: inherit;
+  transition: color .4s ease-in-out; }
 
 .fa-facebook:hover {
   color: #3b5998; }
@@ -591,7 +598,7 @@ blockquote {
   margin-bottom: 0; }
 
 .fancy-div {
-  margin: 30px 0;
+  margin: 40px 0;
   display: block;
   border: 0;
   text-align: center; }
@@ -609,8 +616,10 @@ body {
   background-color: #fff; }
 
 main {
-  margin-top: 67px; }
-  main section.wrap {
+  height: auto !important;
+  min-height: 85%;
+  margin: 0 auto -4em; }
+  main .wrap {
     margin: 1.5rem auto; }
 
 .hamburgler-active .site-header {
@@ -629,6 +638,12 @@ a:hover {
 .wrap {
   margin: 0 auto;
   max-width: 36rem; }
+
+.intro-hero {
+  margin: 0 auto 3rem;
+  max-width: 50rem; }
+  .intro-hero hr {
+    margin-top: 3rem; }
 
 img {
   height: auto;
@@ -670,6 +685,11 @@ figure:hover figcaption {
     height: 100%;
     background-size: contain; }
 
+.selfie {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px; }
+
 .image-header {
   min-height: 300px; }
   .image-header .post-image {
@@ -682,51 +702,46 @@ figure:hover figcaption {
     border: 0; }
 
 .site-footer {
-  display: block;
-  padding: 1rem 0;
+  background-color: #5c5c5c;
+  padding: 1.2rem 0;
+  margin-top: 7.5rem;
   font-size: 15px;
-  position: relative;
+  font-family: "Roboto", "Helvetica-Neue", sans-serif;
+  height: 4rem;
+  text-align: center;
   width: 100%; }
-
-.footer-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .footer-container .copyright {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto; }
-  .footer-container .footer-social {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto; }
-  .footer-container .footer-icon {
+  .site-footer .footer-container {
+    color: #fff;
+    font-size: .9rem; }
+    .site-footer .footer-container a {
+      color: #cccccc;
+      border-bottom: 1px dotted #cccccc;
+      transition: all .4s ease-in-out; }
+      .site-footer .footer-container a:hover {
+        color: #fff;
+        border-bottom: 1px dotted #fff; }
+  .site-footer .footer-icon {
     display: inline-block;
     opacity: .75;
     padding: .25rem;
-    border: 0; }
+    border-bottom: 0 !important; }
 
 .share a {
   margin: 0 5px; }
 
 .hero-overlay {
   position: relative;
-  margin-bottom: 2em;
-  padding: 3em 0;
+  padding: 1em 0;
   clear: both;
-  background-color: #424242;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
   .hero-overlay h1 {
-    color: #fff;
+    color: #424242;
     font-size: 4.5rem;
     margin: 0 !important; }
   .hero-overlay h3 {
-    color: #fff;
+    color: #424242;
     margin-top: 0 !important;
     text-align: center; }
 
@@ -752,30 +767,22 @@ figure:hover figcaption {
 
 @media (min-width: 600px) {
   .site-nav {
-    display: block; }
-  .hamburgler-icon-wrapper {
-    display: none; } }
+    display: block; } }
 
 @media (max-width: 600px) {
-  main {
-    margin-top: 57px; }
+  .index-page hr {
+    margin: 0 1rem; }
   .wrap {
     padding: 0 1rem; }
   .site-nav {
-    display: none; }
-  .hamburgler-icon-wrapper {
     display: block; }
   .hero-overlay .page-title {
     font-size: 3rem; }
   img {
     padding: 0 -1rem; }
   .site-header .nav-wrap {
-    margin: 0 1rem;
     display: inline-block;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between; }
+    text-align: center; }
   figure.fw-image {
     background-size: contain; }
     figure.fw-image .full-width-image {
@@ -802,34 +809,34 @@ figure:hover figcaption {
     display: inline-block; } }
 
 .site-header {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  background-color: #424242;
+  background-color: #fff;
   z-index: 1000000;
-  position: fixed;
+  text-align: center;
   width: 100%;
   top: 0; }
   .site-header .nav-wrap {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem 0; }
-  .site-header a {
+    padding: 1rem 0; }
+  .site-header li a {
     border: 0;
-    color: #bfbfbf; }
-  .site-header a:hover {
-    color: #fff;
-    transition: color .3s linear, background-color .3s linear; }
-  .site-header .site-title:hover {
-    border-bottom: 1px solid #fff;
-    transition: border .8s ease; }
+    color: #c2c2c2;
+    transition: all .4s ease-in-out; }
+    .site-header li a:hover {
+      color: #424242; }
 
 .site-title {
   display: inline-block;
   font-family: "Playfair-Display", "Georgia", serif;
   margin: 0;
-  border-bottom: 1px solid transparent; }
+  width: 200px;
+  border-bottom: 1px solid transparent;
+  transition: all .8s ease-in-out; }
   .site-title a {
-    color: #fff; }
+    color: #686868;
+    border-bottom: 1px solid transparent; }
+  .site-title a:hover {
+    color: #424242; }
+  .site-title.site-title:hover {
+    border-bottom: 1px solid #bf616a; }
 
 .nav {
   font-family: "Roboto", "Helvetica-Neue", sans-serif;
@@ -841,7 +848,7 @@ figure:hover figcaption {
     .nav li a:hover {
       background-color: transparent; }
   .nav .active a {
-    color: #fff;
+    color: #424242;
     transition: all ease .8s; }
 
 .tag-menu {
@@ -891,7 +898,7 @@ figure:hover figcaption {
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: #fff;
+  background: #424242;
   transition: all .2s ease;
   left: 0; }
 
@@ -921,7 +928,7 @@ figure:hover figcaption {
   background: #fff; }
 
 .hamburgler-menu {
-  transition: all .4s ease;
+  transition: all .8s ease;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -929,21 +936,20 @@ figure:hover figcaption {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #4f4f4f;
   color: #fff;
-  text-align: center;
   height: 100%;
   overflow: hidden;
   z-index: 1000000; }
 
 .hamburgler-menu-list {
   display: block;
-  transition: all .4s ease;
+  transition: all .8s ease;
   padding: 0;
   list-style-type: none;
   position: fixed;
   top: 25%;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%, -50%) scale(1.2); }
   .hamburgler-menu-list li {
     margin: .5rem 0; }
@@ -953,7 +959,7 @@ figure:hover figcaption {
       border-bottom: 0; }
 
 .hamburgler-active .hamburgler-menu {
-  opacity: 1;
+  opacity: .95;
   pointer-events: initial; }
 
 .hamburgler-active .hamburgler-menu-list {
@@ -999,9 +1005,6 @@ progress::-moz-progress-bar {
   text-align: center;
   letter-spacing: -1px;
   font-weight: 300; }
-
-.blog-post .page-title {
-  margin: -2rem 0 0 !important; }
 
 .blog-post .post-meta {
   text-align: center; }
@@ -1199,3 +1202,31 @@ progress::-moz-progress-bar {
   font-style: italic;
   border-bottom: 1px dotted #c2c2c2;
   margin-top: 2rem; }
+
+.library-wrapper {
+  margin: 3rem 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .library-wrapper .book {
+    width: 20%;
+    padding: 1rem .2rem;
+    display: inline-block;
+    justify-content: center; }
+    .library-wrapper .book .book-cover {
+      width: 100%;
+      position: relative;
+      left: 0;
+      height: 0;
+      padding-bottom: 100%; }
+      .library-wrapper .book .book-cover a {
+        opacity: 1;
+        transition: opacity .65s ease-in-out; }
+        .library-wrapper .book .book-cover a:hover {
+          opacity: .8; }
+      .library-wrapper .book .book-cover img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        margin-bottom: .5rem; }

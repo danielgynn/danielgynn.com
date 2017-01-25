@@ -37,9 +37,7 @@ p {
 p,
 ul li {
   margin: 0 auto;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
+  font-variant: normal;
   font-weight: normal;
   font-stretch: normal;
   line-height: 30px;
@@ -65,9 +63,18 @@ h6 {
   margin-top: 1rem;
 }
 
+.intro-header {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-family: $font-roboto;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .page-title {
   font-size: 2.5rem;
-  padding-top: 3rem;
+  padding-top: 0;
+  font-weight: 900;
   font-family: $font-old-standard;
   text-align: center;
   font-style: italic;
@@ -77,10 +84,6 @@ h6 {
   font-size: 2.2rem;
   font-family: $font-old-standard;
   font-style: italic;
-}
-
-.page-desc {
-  font-family: $font-julius;
 }
 
 .tag-books {
@@ -93,6 +96,11 @@ h6 {
       font-style: italic;
     }
   }
+}
+
+.fa {
+  color: inherit;
+  transition: color .4s ease-in-out;
 }
 
 // Colour social icons on hover.
@@ -175,7 +183,7 @@ blockquote {
 }
 
 .fancy-div {
-  margin: 30px 0;
+  margin: 40px 0;
   display: block;
   border: 0;
   text-align: center;

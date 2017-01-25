@@ -1,15 +1,13 @@
 {{!< default}}
 <section class="wrap">
 
-  <h1 class="page-title">Talks</h1>
-
   {{#post}}
     {{content}}
   {{/post}}
 
-  {{#get "posts" limit="all" include="author,tags" filter="tag:talks"}}
+  <hr class="fancy-div">
 
-    <hr>
+  {{#get "posts" limit="all" include="author,tags" filter="tag:talks"}}
 
     {{#foreach posts}}
       <article class="{{post_class}}">

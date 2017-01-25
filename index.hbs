@@ -1,38 +1,39 @@
 {{!< default}}
+<main class="index-page">
+  <section class="intro-hero">
+    <div class="wrap">
+      <img src="{{@blog.logo}}" class="selfie center-align" alt="selfie">
+      <p class="intro-header">Hey, I'm Daniel Gynn, a frontend developer, occasional writed and all-round dork.</p>
+    </div>
+    <hr>
+  </section>
 
-<header class="hero-overlay" style="background-image: url('{{@blog.cover}}')">
-  <div class="wrap">
-    <h1 class="page-title website-head">Daniel Gynn</h1>
-    <h3 class="page-desc">Frontend Web Developer</h1>
-  </div>
-</header>
-
-<section class="wrap">
-  <h1 class="page-subtitle">Recent Blog Posts</h1>
-  {{#get "posts" limit="3" include="author,tags" filter="tag:learning"}}
-    {{#foreach posts}}
-      <article class="{{post_class}}">
-        <section class="list-content home-list">
-          <h5 class="mini-post-header">
-            <a href="{{url}}">{{{title}}}</a>
-          </h5>
-          <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
-          <section class="post-excerpt">
-            <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+  <section class="wrap">
+    <h1 class="page-subtitle">Recent Blog Posts</h1>
+    {{#get "posts" limit="3" include="author,tags" filter="tag:[learning, books]"}}
+      {{#foreach posts}}
+        <article class="{{post_class}}">
+          <section class="list-content home-list">
+            <h5 class="mini-post-header">
+              <a href="{{url}}">{{{title}}}</a>
+            </h5>
+            <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
+            <section class="post-excerpt">
+              <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+            </section>
           </section>
-        </section>
-        <hr class="no-margin">
-      </article>
-    {{/foreach}}
-    <p><a href="/blog">Read more blog posts...</a></p>
-  {{/get}}
-</section>
+          <hr class="no-margin">
+        </article>
+      {{/foreach}}
+      <p><a href="/blog">Read more blog posts...</a></p>
+    {{/get}}
+  </section>
 
-<hr>
+  <hr class="fancy-div">
 
-{{#get "posts" limit="3" include="author,tags" filter="tag:talks"}}
   <section class="wrap">
     <h1 class="page-subtitle">Recent Talks</h1>
+    {{#get "posts" limit="3" include="author,tags" filter="tag:talks"}}
     {{#foreach posts}}
       <article class="{{post_class}}">
         <section class="list-content home-list">
@@ -48,13 +49,14 @@
       </article>
     {{/foreach}}
     <p><a href="/talks">See more talks...</a></p>
+    {{/get}}
   </section>
-  <hr>
-{{/get}}
 
-{{#get "posts" limit="3" include="author,tags" filter="tag:photography"}}
+  <hr class="fancy-div">
+
   <section class="wrap">
     <h1 class="page-subtitle">Recent Photography</h1>
+    {{#get "posts" limit="3" include="author,tags" filter="tag:photography"}}
     {{#foreach posts}}
       <article>
         <section class="tag-photography">
@@ -72,5 +74,6 @@
       </article>
     {{/foreach}}
     <p><a href="/photography">See more photography...</a></p>
+    {{/get}}
   </section>
-{{/get}}
+</main>

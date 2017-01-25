@@ -1,0 +1,38 @@
+.library-wrapper {
+  margin: 3rem 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .book {
+    width: 20%;
+    padding: 1rem .2rem;
+    display: inline-block;
+    justify-content: center;
+
+    .book-cover {
+      width: 100%;
+      position: relative;
+      left: 0;
+      height: 0;
+      padding-bottom: 100%;
+
+      a {
+        opacity: 1;
+        transition: opacity .65s ease-in-out;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

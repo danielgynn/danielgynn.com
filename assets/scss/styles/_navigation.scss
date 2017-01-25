@@ -1,33 +1,32 @@
 // Navigation
 
 .site-header {
-  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
-  background-color: $color-tundora;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+  background-color: $color-white;
   z-index: 1000000;
-  position: fixed;
+  // position: fixed;
+  text-align: center;
   width: 100%;
   top: 0;
 
   .nav-wrap {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem 0;
+    // align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    padding: 1rem 0;
+    // margin: 0 1rem;
   }
 
-  a {
-    border: 0;
-    color: darken($color-white, 25%);
-  }
+  li {
+    a {
+      border: 0;
+      color: lighten($color-tundora, 50%);
+      transition: all .4s ease-in-out;
 
-  a:hover {
-    color: $color-white;
-    transition: color .3s linear, background-color .3s linear;
-  }
-
-  .site-title:hover {
-    border-bottom: 1px solid $color-white;
-    transition: border .8s ease;
+      &:hover {
+        color: lighten($color-tundora, 0);
+      }
+    }
   }
 }
 
@@ -35,10 +34,21 @@
   display: inline-block;
   font-family: $font-playfair;
   margin: 0;
+  width: 200px;
   border-bottom: 1px solid transparent;
+  transition: all .8s ease-in-out;
 
   a {
-    color: $color-white;
+    color: lighten($color-tundora, 15%);
+    border-bottom: 1px solid transparent;
+  }
+
+  a:hover {
+    color: $color-tundora;
+  }
+
+  &.site-title:hover {
+    border-bottom: 1px solid $color-contessa;
   }
 }
 
@@ -60,7 +70,7 @@
 
   .active {
     a {
-      color: $color-white;
+      color: $color-tundora;
       transition: all ease .8s;
     }
   }

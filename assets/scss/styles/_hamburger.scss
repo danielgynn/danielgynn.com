@@ -16,7 +16,7 @@
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: $color-white;
+  background: $color-tundora;
   transition: all .2s ease;
   left: 0;
 }
@@ -54,7 +54,7 @@
 }
 
 .hamburgler-menu {
-  transition: all .4s ease;
+  transition: all .8s ease;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -62,9 +62,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: lighten($color-tundora, 5%);
   color: $color-white;
-  text-align: center;
   height: 100%;
   overflow: hidden;
   z-index: 1000000;
@@ -72,12 +71,12 @@
 
 .hamburgler-menu-list {
   display: block;
-  transition: all .4s ease;
+  transition: all .8s ease;
   padding: 0;
   list-style-type: none;
   position: fixed;
   top: 25%;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%, -50%) scale(1.2);
 
   li {
@@ -93,7 +92,7 @@
 
 .hamburgler-active {
   .hamburgler-menu {
-   opacity: 1;
+   opacity: .95;
    pointer-events: initial;
  }
 
