@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,700"/>
-  <link rel="stylesheet" type="text/css" href="/build/app.css"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "/build/app.css"}}"/>
   <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
 
   {{! Ghost outputs important style and meta data with this tag }}
@@ -43,9 +43,12 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <!-- <script type="text/javascript" src="{{asset "js/jquery.bootstrap-autohidingnavbar.min.js"}}"></script> -->
+  <script type="text/javascript" src="{{asset "/js/scripts/prism.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/scripts/progress-bar.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/scripts/zooming.js"}}"></script>
 
   {{! Main compiled script}}
-  <script type="text/javascript" src="/build/app.min.js"></script>
+  <script type="text/javascript" src="{{asset "/build/app.js"}}"></script>
 
   {{! GoSquared tracking code}}
   <script>

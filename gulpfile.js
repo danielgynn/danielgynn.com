@@ -3,9 +3,9 @@ var gulp       = require('gulp'),
     autoprefix = require('gulp-autoprefixer'),
     jshint     = require('gulp-jshint'),
     stylish    = require('jshint-stylish'),
-    concat     = require('gulp-concat');
-    uglify     = require('gulp-uglify');
-    rename     = require('gulp-rename');
+    concat     = require('gulp-concat'),
+    uglify     = require('gulp-uglify'),
+    rename     = require('gulp-rename'),
     cleanCSS   = require('gulp-clean-css');
 
 gulp.task('styles', function() {
@@ -14,22 +14,15 @@ gulp.task('styles', function() {
       style: 'compressed'
     }))
   .pipe(concat('app.css'))
-  .pipe(gulp.dest('./build'))
-  .pipe(rename('app.min.css'))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('./build'));
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(gulp.dest('./assets/build'));
 });
 
 gulp.task('scripts', function () {
-  return gulp.src([
-    './bower_components/jquery/dist/jquery.js',
-    './assets/js/scripts/*.js'
-    ])
+  return gulp.src('./assets/js/scripts/*.js')
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./build'))
-    .pipe(rename('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./assets/build'));
 });
 
 gulp.task('jshint', function () {

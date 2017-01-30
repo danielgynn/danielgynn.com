@@ -118,7 +118,7 @@ figure:hover figcaption {
 }
 
 .site-footer {
-  background-color: lighten($color-tundora, 10%);
+  // background-color: lighten($color-tundora, 10%);
   padding: 1.2rem 0;
   margin-top: 7.5rem;
   font-size: 15px;
@@ -128,17 +128,17 @@ figure:hover figcaption {
   width: 100%;
 
   .footer-container {
-    color: $color-white;
+    color: $color-tundora;
     font-size: .9rem;
 
       a {
-        color: darken($color-white, 20%);
-        border-bottom: 1px dotted darken($color-white, 20%);
+        color: lighten($color-tundora, 10%);
+        border-bottom: 1px dotted lighten($color-tundora, 10%);
         transition: all .4s ease-in-out;
 
         &:hover {
-          color: $color-white;
-          border-bottom: 1px dotted $color-white;
+          color: $color-tundora;
+          border-bottom: 1px dotted $color-tundora;
         }
       }
     }
