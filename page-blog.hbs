@@ -2,23 +2,21 @@
 <section class="wrap">
 
   <h1 class="page-title">Blog Archive</h1>
-
-  <!-- <div class="tag-menu">
-    <ul>
-      <li><a href="/blog" class="active-tag">All</a></li>
-      <li><a href="/web"><i class="fa fa-tag"></i> Web</a></li>
-      <li><a href="/books"><i class="fa fa-tag"></i> Books</a></li>
-    </ul>
-  </div> -->
+  <p>A collection of <strong>{{pages.total}}</strong> post(s) on web development and design, literature, and my own mindless ramblings about nothing in particular.</p>
+  <hr class="fancy-div">
+  <ul class="tag-menu">
+    <li><a href="/blog">All</a></li>
+    <li><a href="/tag/learning">Development</a></li>
+    <li><a href="/tag/books">Books</a></li>
+    <li><a href="/tag/writing">Writing</a></li>
+  </ul>
+  <hr>
 
   {{#post}}
     {{content}}
   {{/post}}
 
   {{#get "posts" limit="all" include="author,tags" filter="tag:learning, tag:books, tag:writing" as |posts pages|}}
-
-  <p>A collection of <strong>{{pages.total}}</strong> post(s) on web development and design, literature, and my own mindless ramblings about nothing in particular.</p>
-  <hr class="fancy-div">
 
     {{#foreach posts}}
       <article class="{{post_class}}">
