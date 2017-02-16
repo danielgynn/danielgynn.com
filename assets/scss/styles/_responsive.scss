@@ -7,6 +7,53 @@
   figure {
     padding: 0;
   }
+
+  .flex-column {
+    width: 90%;
+    flex-direction: column;
+
+    .flex-img {
+      width: 60%;
+      margin-bottom: 1rem;
+      height: auto;
+    }
+
+    .flex-text {
+      margin: 0;
+    }
+  }
+
+  .index-page {
+    hr {
+      margin: 0 1rem;
+    }
+
+    .main-content {
+      width: 90%;
+      margin: 1rem auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+
+  .hamburgler-icon-wrapper {
+    display: block !important;
+  }
+
+  .nav {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
@@ -16,9 +63,50 @@
 }
 
 @media (max-width: 600px) {
+  .flex-column {
+    width: 90%;
+    flex-direction: column;
+
+    .flex-img {
+      margin-bottom: 1rem;
+      width: 60%;
+      height: auto;
+    }
+
+    .flex-text {
+      margin: 0;
+    }
+  }
+
+  .hamburgler-icon-wrapper {
+    display: block !important;
+  }
+
+  .nav {
+    display: none;
+  }
+
   .index-page {
     hr {
       margin: 0 1rem;
+    }
+
+    .main-content {
+      width: 90%;
+      margin: 1rem auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      text-align: left;
+      font-size: 1rem;
     }
   }
 
@@ -47,7 +135,6 @@
 
   .site-header {
     .nav-wrap {
-      display: inline-block;
       text-align: center;
     }
   }
@@ -64,14 +151,6 @@
     height: 150px !important;
   }
 
-  .site-footer {
-    padding: 1.4rem 0;
-
-    .footer-container {
-      font-size: .8rem;
-    }
-  }
-
   .post {
     .post-meta {
       p {
@@ -82,7 +161,11 @@
     h1,
     .blog-post-title {
       font-size: 1.8rem !important;
-      margin: 1rem 0 !important;
+      margin: 1rem 0 0 !important;
+    }
+
+    .post-title-link {
+      font-size: 1.4rem !important;
     }
 
     h2 {

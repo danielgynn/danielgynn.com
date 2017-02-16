@@ -1,13 +1,15 @@
 {{!< default}}
-<section class="wrap">
+<section>
+  <header>
+    <h1 class="page-title">Profile</h1>
+  </header>
 
-  <!-- <h1 class="page-title">Profile</h1> -->
-  <img src="{{@blog.logo}}" class="selfie center-align" alt="selfie">
-  <hr class="fancy-div">
-
-  {{#post}}
-    {{content}}
-  {{/post}}
-
-
+  <div class="flex-column">
+    <img class="flex-img" src="{{@blog.logo}}" alt="selfie">
+    <div class="flex-text">
+      {{#post}}
+        {{content}}
+      {{/post}}
+    </div>
+  </div>
 </section>

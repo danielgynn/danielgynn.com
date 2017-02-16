@@ -1,6 +1,6 @@
 .post {
-    text-align: left;
-    max-width: 100%;
+  text-align: left;
+  max-width: 100%;
 }
 
 .post-header {
@@ -17,10 +17,6 @@
     text-align: center;
     letter-spacing: -1px;
     font-weight: 300;
-  }
-
-  .page-title {
-    // margin: -2rem 0 0 !important;
   }
 
   .post-meta {
@@ -98,23 +94,23 @@
 }
 
 .post-body {
-    color: $color-emperor;
+  color: $color-tundora;
 }
 
 .post-foot {
   font-size: 1rem;
-    padding-bottom: 25px;
-    position: relative;
-    margin-bottom: 1rem;
+  padding-bottom: 25px;
+  position: relative;
+  margin-bottom: 1rem;
 
-    i {
-      padding: 0 2px;
-    }
+  i {
+    padding: 0 2px;
+  }
 
-    a {
-      border: 0;
-      text-decoration: none;
-    }
+  a {
+    border: 0;
+    text-decoration: none;
+  }
 }
 
 .post-excerpt a {
@@ -122,18 +118,18 @@
 }
 
 .post-foot-left {
-    height: 100%;
-    width: 75%;
+  height: 100%;
+  width: 75%;
 }
 
 .post-foot-right {
-    text-align: right;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
-    width: 35%;
-    margin-right: 20px;
+  text-align: right;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 35%;
+  margin-right: 20px;
 }
 
 .mini-post-header {

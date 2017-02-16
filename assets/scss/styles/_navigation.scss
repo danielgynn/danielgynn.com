@@ -1,54 +1,68 @@
 // Navigation
-
 .site-header {
-  // box-shadow: 0 0 10px rgba(0, 0, 0, .6);
-  background-color: $color-white;
+  background-color: $color-charade;
   z-index: 1000000;
-  // position: fixed;
   text-align: center;
   width: 100%;
   top: 0;
 
   .nav-wrap {
-    // align-items: center;
-    // display: flex;
-    // justify-content: space-between;
     padding: 1rem 0;
-    // margin: 0 1rem;
   }
 
-  li {
-    a {
-      border: 0;
-      color: lighten($color-tundora, 50%);
-      transition: all .4s ease-in-out;
+  a {
+    border: 0;
+    color: lighten($color-white, 50%);
+    transition: all .4s ease-in-out;
 
-      &:hover {
-        color: lighten($color-tundora, 0);
+    &:hover {
+      color: $color-white;
+
+      &::after {
+        background-color: $color-contessa;
       }
     }
   }
 }
 
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
 .site-title {
   display: inline-block;
-  font-family: $font-playfair;
   margin: 0;
   width: 200px;
-  border-bottom: 1px solid transparent;
   transition: all .8s ease-in-out;
-
-  a {
-    color: lighten($color-tundora, 15%);
-    border-bottom: 1px solid transparent;
-  }
-
-  a:hover {
-    color: $color-tundora;
-  }
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: .75em;
+  background: #272932;
+  border: 5px solid $color-white;
+  color: $color-white;
 
   &.site-title:hover {
-    border-bottom: 1px solid $color-contessa;
+    background: $color-white;
+    color: $color-charade;
+    cursor: pointer;
+  }
+}
+
+.site-title-link {
+  border-bottom: 0;
+
+  &::after {
+    bottom: 10px;
+  }
+
+  &:hover::after {
+    width: 75%;
   }
 }
 
@@ -58,19 +72,19 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  li {
+  a {
+    position: relative;
     display: inline-block;
+    padding: 10px 15px;
 
-    a {
-      &:hover {
-        background-color: transparent;
-      }
+    &:hover {
+      background-color: transparent;
     }
   }
 
   .active {
     a {
-      color: $color-tundora;
+      color: $color-white;
       transition: all ease .8s;
     }
   }
@@ -86,9 +100,7 @@
   margin: 0;
 
   li {
-    margin: 0 .5rem;
-    flex: 1;
-    text-align: center;
+
     // font-size: 1.2rem;
     // line-height: 40px;
     // height: 30px;
@@ -97,16 +109,19 @@
   }
 
   a {
+    margin: 0 .5rem;
+    flex: 1;
+    text-align: center;
     text-decoration: none;
     display: block;
     transition: .5s all ease;
-    color: lighten($color-tundora, 25%);
+    color: lighten($color-white, 25%);
     border-bottom: 2px solid transparent;
     // width: 100px;
 
     &:hover {
       border-bottom: 2px solid lighten($color-contessa, 25%);
-      color: $color-tundora;
+      color: $color-white;
     }
 
     &:active {
@@ -117,6 +132,6 @@
 
   .active-tag {
     border-bottom: 2px solid $color-contessa;
-    color: $color-tundora;
+    color: $color-white;
   }
 }

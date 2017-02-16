@@ -2,10 +2,13 @@
 @import 'styles/normalize';
 @import 'styles/prism';
 
+
 // Base styles
 @import 'styles/variables';
 @import 'styles/typography';
+@import 'styles/index';
 @import 'styles/base';
+@import 'styles/flex';
 @import 'styles/responsive';
 
 // Component-specific styles
@@ -13,7 +16,7 @@
 @import 'styles/hamburger';
 @import 'styles/progress';
 
-// Post-specific styles
+// Page-specific styles
 @import 'styles/post';
 @import 'styles/photography';
 @import 'styles/resume';

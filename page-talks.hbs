@@ -6,39 +6,25 @@
   {{/post}}
 
   <h1 class="page-title">Recent Talks</h1>
+  <!-- <img src="http://i.imgur.com/ra2FbuC.jpg" /> -->
+
   <hr class="fancy-div">
+
 
   {{#get "posts" limit="all" include="author,tags" filter="tag:talks"}}
 
     {{#foreach posts}}
-    <article class="{{post_class}}">
-      <section class="list-content home-list">
-        <h5 class="mini-post-header">
-          <a href="{{url}}">{{{title}}}</a>
-        </h5>
-        <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
-        <section class="post-excerpt">
-          <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
-        </section>
-      </section>
-    </article>
-      <!-- <article class="{{post_class}}">
-        <section class="list-content">
-          <header class="cover post post-head">
-            <h1 class="cover-heading post-title"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
-            <section class="post-meta">
-              Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-              {{#if tags}}in {{tags separator=", "}}{{/if}}
-            </section>
-          </header>
+      <article class="{{post_class}}">
+        <section class="list-content home-list">
+          <h5 class="mini-post-header">
+            <a href="{{url}}">{{{title}}}</a>
+          </h5>
+          <span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
           <section class="post-excerpt">
-            <div class="cover post post-body">
-              <p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
-            </div>
+            <p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
           </section>
         </section>
-        <hr>
-      </article> -->
+      </article>
     {{/foreach}}
 
   {{/get}}

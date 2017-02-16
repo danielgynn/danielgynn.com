@@ -1,0 +1,64 @@
+.index-page {
+  background-color: $color-charade;
+  height: 100vh !important;
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  position: absolute;
+  font-family: $font-roboto !important;
+  text-align: left;
+
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 6rem auto 0;
+    width: 60%;
+  }
+
+  header {
+    animation-delay: .2s;
+    margin-bottom: 2rem;
+  }
+
+  .section-one {
+    animation-delay: 1.2s;
+    margin-bottom: 1rem;
+  }
+
+  .section-two {
+    animation-delay: 2.2s;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: .5rem 0;
+    color: $color-white !important;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    // padding: .75em;
+    background: #272932;
+    border: 0;
+    display: block;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: .5rem !important;
+  }
+}

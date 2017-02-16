@@ -1,18 +1,19 @@
 <header class="site-header" role="banner">
-	<section class="wrap nav-wrap">
+	<section class="nav-wrap">
 
 		<nav class="site-nav">
-			<h3 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h3>
+			<a class="site-title-link" href="{{@blog.url}}">
+				<h3 class="site-title">{{@blog.title}}</h3>
+			</a>
+			<div id="hamburgler" class="hamburgler-icon-wrapper">
+				<span class="hamburgler-icon"></span>
+			</div>
 			<ul class="nav">
 				{{#foreach navigation}}
-					<li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+					<a href="{{url absolute="true"}}"><li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation">{{label}}</li></a>
 				{{/foreach}}
 			</ul>
-			<!-- <div id="hamburgler" class="hamburgler-icon-wrapper">
-				<span class="hamburgler-icon"></span>
-			</div> -->
 		</nav>
-
 
 	</section>
 </header>
@@ -20,7 +21,7 @@
 <div class="hamburgler-menu">
 	<ul class="hamburgler-menu-list">
 		{{#foreach navigation}}
-			<li role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+			<a href="{{url absolute="true"}}" role="presentation">{{label}}</a>
 		{{/foreach}}
 	</ul>
 </div>

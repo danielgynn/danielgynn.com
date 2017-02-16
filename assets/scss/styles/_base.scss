@@ -8,8 +8,8 @@ main {
   // margin-top: 124px;
   height: auto !important;
   // height: 100%;
-  min-height: 85%;
-  margin: 0 auto -4em;
+  min-height: 78%;
+  margin: 0 auto;
 
   .wrap {
     margin: 1.5rem auto;
@@ -24,14 +24,6 @@ main {
   main {
     margin-top: 0;
   }
-}
-
-a,
-a:focus,
-a:hover {
-  border-bottom: 1px dotted $color-contessa;
-  color: $color-contessa;
-  text-decoration: none;
 }
 
 .wrap {
@@ -118,30 +110,34 @@ figure:hover figcaption {
 }
 
 .site-footer {
-  // background-color: lighten($color-tundora, 10%);
-  padding: 1.2rem 0;
-  margin-top: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 0 auto;
   font-size: 15px;
   font-family: $font-roboto;
-  height: 4rem;
-  text-align: center;
-  width: 100%;
 
-  .footer-container {
-    color: $color-tundora;
-    font-size: .9rem;
+  p {
+    margin: 0 !important;
+    padding: .5rem 0;
+  }
 
-      a {
-        color: lighten($color-tundora, 10%);
-        border-bottom: 1px dotted lighten($color-tundora, 10%);
-        transition: all .4s ease-in-out;
-
-        &:hover {
-          color: $color-tundora;
-          border-bottom: 1px dotted $color-tundora;
-        }
-      }
-    }
+  // .footer-container {
+  //   color: $color-tundora;
+  //   font-size: .9rem;
+  //
+  //     a {
+  //       color: lighten($color-tundora, 10%);
+  //       border-bottom: 1px dotted lighten($color-tundora, 10%);
+  //       transition: all .4s ease-in-out;
+  //
+  //       &:hover {
+  //         color: $color-tundora;
+  //         border-bottom: 1px dotted $color-tundora;
+  //       }
+  //     }
+  //   }
 
   .footer-icon {
     display: inline-block;
