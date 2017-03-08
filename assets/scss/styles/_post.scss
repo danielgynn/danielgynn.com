@@ -1,6 +1,10 @@
 .post {
   text-align: left;
   max-width: 100%;
+
+  .headline {
+    width: 100%;
+  }
 }
 
 .post-header {
@@ -12,6 +16,11 @@
 }
 
 .blog-post {
+  .headline {
+    font-size: 3.5rem;
+    margin: 2rem auto 0;
+  }
+
   .post-title {
     font-size: 2.2rem;
     text-align: center;
@@ -20,13 +29,9 @@
   }
 
   .post-meta {
-
-    p,
-    section {
-      margin-bottom: 0 !important;
-      line-height: 30px;
-      text-align: center;
-    }
+    color: lighten($color-tundora, 15%);
+    font-weight: 400;
+    margin: 0 auto 1rem;
   }
 
   p:first-child::first-letter {
@@ -55,18 +60,6 @@
   a:hover {
     color: $color-contessa;
     text-decoration: none;
-  }
-}
-
-.post-meta {
-  font-family: $font-bitter;
-  font-size: .7rem;
-  color: $color-silver;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-
-  i {
-    color: $color-silver;
   }
 }
 
@@ -113,10 +106,6 @@
   }
 }
 
-.post-excerpt a {
-  border: 0;
-}
-
 .post-foot-left {
   height: 100%;
   width: 75%;
@@ -140,5 +129,25 @@
     &:hover {
       color: lighten($color-contessa, 15%);
     }
+  }
+}
+
+.post-list {
+  margin-bottom: 2rem;
+}
+
+.post-title-link::after {
+  content: none;
+}
+
+.post-excerpt {
+  p {
+    text-align: left;
+  }
+}
+
+.list-content {
+  .headline {
+    text-align: left;
   }
 }

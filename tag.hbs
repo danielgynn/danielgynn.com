@@ -1,27 +1,37 @@
 {{!< default}}
-<section class="wrap">
-	{{#is "tag"}}
+{{#is "tag"}}
+	{{#tag}}
+		<header class="wrap">
+		  <h1 class="page-title">{{name}} Archive</h1>
+		  <p class="text-center">A collection of <strong>{{total}}</strong> posts, tagged with {{name}}.</p>
+			<!-- <p>{{description}}</p> -->
+		</header>
 
-		{{#tag}}
-	    <h1 class="page-title">{{name}}</h1>
-	    <p>{{description}}</p>
-			<hr class="fancy-div" />
-		{{/tag}}
+		{{#if image}}
+			<div class="img-wrap">
+			  <img src="{{image}}" />
+			<div>
+		{{/if}}
+	{{/tag}}
 
+	<section class="wrap">
 		{{#foreach posts limit="all"}}
 			<article class="{{post_class}}">
-				<section class="list-content home-list">
-					<h5 class="mini-post-header">
-						<a href="{{url}}">{{{title}}}</a>
-					</h5>
-					<span class="time-blocks"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></span>
+				<section class="list-content">
+					<header class="cover post post-head">
+						<h1 class="cover-heading post-title headline"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
+						<section class="blog-blocks">
+							<span>Posted on <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time> {{#if tags}}in {{tags separator=", "}}{{/if}}</span>
+						</section>
+					</header>
 					<section class="post-excerpt">
-						<p>{{excerpt words="22"}}<a class="read-more" href="{{url}}">...</a></p>
+						<div class="cover post post-body">
+							<p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
+						</div>
 					</section>
 				</section>
-				<hr class="no-margin">
+				<hr class="post-hr" />
 			</article>
 		{{/foreach}}
-
-	{{/is}}
-</section>
+	</section>
+{{/is}}

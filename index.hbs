@@ -1,15 +1,17 @@
 {{!< home-default}}
-<div class="">
-  <header class="animated fadeInUp">
-    <h1>{{@blog.title}}</h1>
-    <h2>{{@blog.description}}</h2>
-  </header>
+<nav class="section-one animated fadeInUp">
+  {{navigation}}
+</nav>
 
-  <section class="section-one animated fadeInUp">
-    <p>I'm a freelance developer and designer based in the UK. I enjoy building things on the web with Ember.js and React, and have a strong passion for minimal web design and typography.</p>
-  </section>
+<header class="animated fadeInUp">
+  <h1>{{@blog.title}}</h1>
+  <h2>{{@blog.description}}</h2>
+</header>
 
-  <section class="section-two animated fadeInUp">
-    <p>I spend most of my free time <a href="/blog">writing</a>, taking <a href="/photography">photographs</a>, and browsing <a href="https://twitter.com/danielgynn">Twitter</a>.</p>
-  </section>
-</div>
+<section class="icon-banner section-two animated fadeInUp">
+  <a href="https://twitter.com/danielgynn" class="footer-icon"><i class="fa fa-twitter fa-2x"></i></a>
+  <a href="https://github.com/danielgynn" class="footer-icon"><i class="fa fa-github fa-2x"></i></a>
+  <a href="https://www.instagram.com/danielgynn/" class="footer-icon"><i class="fa fa-instagram fa-2x"></i></a>
+  <a href="https://uk.linkedin.com/in/danielgynn" class="footer-icon"><i class="fa fa-linkedin fa-2x"></i></a>
+  <a href="mailto:danielgynn94@gmail.com" class="footer-icon"><i class="fa fa-envelope-o fa-2x"></i></a>
+</section>

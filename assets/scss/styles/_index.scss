@@ -6,29 +6,65 @@
   padding: 0 !important;
   position: absolute;
   font-family: $font-roboto !important;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-  .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 6rem auto 0;
-    width: 60%;
+  .hamburgler-icon-wrapper {
+    display: none !important;
+  }
+
+  .site-header {
+    background-color: $color-charade;
+
+    .nav-wrap {
+      padding: 1rem 0 0 !important;
+    }
+
+    .nav {
+      a {
+        color: $color-white;
+        opacity: .7;
+
+        &:hover {
+          color: $color-white;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .site-nav {
+    display: block;
+    padding: 0 !important;
+
+    a {
+      font-weight: 700;
+
+      @media (max-width: 600px) {
+        font-size: .75rem !important;
+      }
+    }
+
+    .site-title-link,
+    h4 {
+      display: none;
+    }
   }
 
   header {
     animation-delay: .2s;
-    margin-bottom: 2rem;
   }
 
   .section-one {
     animation-delay: 1.2s;
-    margin-bottom: 1rem;
   }
 
   .section-two {
     animation-delay: 2.2s;
+    margin-bottom: 2rem;
   }
 
   h1,
@@ -39,26 +75,68 @@
   }
 
   h1 {
-    font-size: 4rem;
-    font-weight: 300;
+    font-size: 6rem;
+    font-weight: 700;
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin: 0;
-    // padding: .75em;
     background: #272932;
     border: 0;
     display: block;
+
+    @media (max-width: 600px) {
+      font-size: 3rem !important;
+    }
   }
 
   h2 {
     font-size: 2rem;
     font-weight: 300;
+    opacity: .7;
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem !important;
+    }
   }
 
-  p {
-    text-align: left;
-    font-size: 1.2rem;
-    margin-bottom: .5rem !important;
+  a {
+    text-transform: uppercase;
+    text-align: center;
+    border: 0;
+    color: lighten($color-white, 50%);
+    opacity: .7;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+      opacity: 1;
+
+      &::after {
+        background-color: $color-contessa;
+      }
+    }
+  }
+}
+
+.icon-banner {
+  a {
+    color: $color-white;
+    opacity: .7;
+    margin: 0 .5rem;
+
+    &:hover {
+      color: $color-white !important;
+      opacity: 1;
+    }
+
+    &::after,
+    &:hover::after {
+      background-color: initial;
+    }
+  }
+
+  .fa-2x {
+    font-size: 1.75rem;
   }
 }

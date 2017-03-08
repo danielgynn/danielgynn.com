@@ -1,8 +1,6 @@
 .hamburgler-icon-wrapper {
   position: relative;
   display: none;
-  // top: 1em;
-  // right: 1em;
   height: 26px;
   width: 26px;
   cursor: pointer;
@@ -17,7 +15,7 @@
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: $color-white;
+  background: lighten($color-charade, 15%);
   transition: all .2s ease;
   left: 0;
 }
@@ -102,7 +100,7 @@
 
  .hamburgler-icon-wrapper {
    position: fixed;
-   right: 1rem;
-   top: 2rem;
+   right: 2rem;
+   top: 3rem;
  }
 }

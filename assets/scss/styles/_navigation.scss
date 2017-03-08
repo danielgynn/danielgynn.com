@@ -1,25 +1,25 @@
 // Navigation
 .site-header {
-  background-color: $color-charade;
+  background-color: $color-white;
   z-index: 1000000;
   text-align: center;
   width: 100%;
   top: 0;
 
-  .nav-wrap {
-    padding: 1rem 0;
-  }
+  .nav {
+    a {
+      border: 0;
+      color: $color-charade;
+      opacity: .7;
+      transition: all .4s ease-in-out;
 
-  a {
-    border: 0;
-    color: lighten($color-white, 50%);
-    transition: all .4s ease-in-out;
+      &:hover {
+        color: $color-charade;
+        opacity: 1;
 
-    &:hover {
-      color: $color-white;
-
-      &::after {
-        background-color: $color-contessa;
+        &::after {
+          background-color: $color-contessa;
+        }
       }
     }
   }
@@ -29,41 +29,52 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .site-title {
   display: inline-block;
   margin: 0;
-  width: 200px;
   transition: all .8s ease-in-out;
-  font-size: 1em;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 100;
   line-height: 1;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: .75em;
-  background: #272932;
-  border: 5px solid $color-white;
-  color: $color-white;
+  padding: .5rem;
+  background: $color-white;
+  border: 2px solid $color-charade;
+  color: $color-charade;
 
   &.site-title:hover {
-    background: $color-white;
-    color: $color-charade;
+    background: $color-charade;
+    color: $color-white;
     cursor: pointer;
   }
 }
 
 .site-title-link {
   border-bottom: 0;
+  opacity: 1;
+
+  h1 {
+    font-weight: 100;
+    font-family: $font-playfair;
+  }
 
   &::after {
     bottom: 10px;
   }
 
   &:hover::after {
-    width: 75%;
+    width: 100%;
   }
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: .7;
 }
 
 .nav {
@@ -75,7 +86,7 @@
   a {
     position: relative;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 5px 15px;
 
     &:hover {
       background-color: transparent;
@@ -84,54 +95,8 @@
 
   .active {
     a {
-      color: $color-white;
+      color: $color-charade;
       transition: all ease .8s;
     }
-  }
-}
-
-.tag-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-
-  li {
-
-    // font-size: 1.2rem;
-    // line-height: 40px;
-    // height: 30px;
-    // margin: 0 .4rem;
-    // display: inline-block;
-  }
-
-  a {
-    margin: 0 .5rem;
-    flex: 1;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: .5s all ease;
-    color: lighten($color-white, 25%);
-    border-bottom: 2px solid transparent;
-    // width: 100px;
-
-    &:hover {
-      border-bottom: 2px solid lighten($color-contessa, 25%);
-      color: $color-white;
-    }
-
-    &:active {
-      cursor: default;
-      border-bottom: 2px solid $color-contessa;
-    }
-  }
-
-  .active-tag {
-    border-bottom: 2px solid $color-contessa;
-    color: $color-white;
   }
 }

@@ -5,14 +5,14 @@
   {{#post}}
     {{content}}
   {{/post}}
+</section>
 
-  <hr class="fancy-div">
+<section class="photo-wrap">
 
   {{#get "posts" limit="all" include="author,tags" filter="tag:photography"}}
 
     {{#foreach posts}}
-      <article>
-        <section class="tag-photography">
+        <article class="tag-photography">
           <a class="pg-link-cover" href="https://danielgynn.exposure.co{{url}}" target="_blank"></a>
           <div class="pg-cover" style="background-image: url('{{@image}}');"></div>
           <div class="pg-content">
@@ -23,8 +23,7 @@
               </div>
             </a>
           </div>
-        </section>
-      </article>
+        </article>
     {{/foreach}}
 
   {{/get}}

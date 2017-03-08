@@ -2,32 +2,31 @@
 <progress value="0"></progress>
 {{#post}}
 
+<section class="wrap">
+  <div class="inner cover post post-head">
+    <article class="{{post_class}} blog-post">
+      <header>
+        <h1 class="headline">{{{title}}}</h1>
+      </header>
+      <section class="">
+        <h5 class="post-meta text-center">
+          Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time>{{#if tags}}, in {{tags separator=", "}}.{{/if}}
+          {{> "share"}}
+        </h5>
+      </section>
+    </article>
+  </div>
+</section>
+
 {{#if image}}
-  <header class="post-header">
-    <div class="hero-overlay" style="background-image: url('{{image}}')"></div>
+  <header class="img-wrap">
+    <img src="{{image}}" alt="post-banner" />
   </header>
 {{/if}}
 
 <section class="wrap">
-
     <article class="{{post_class}} blog-post">
-
       <header class="inner cover post post-head">
-        <h1 class="page-title">{{{title}}}</h1>
-        <section class="post-meta">
-          <hr>
-          <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on
-          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>
-
-          <p>{{#if tags}} Posted in {{tags separator=", "}}{{/if}}</p>
-
-          {{> "share"}}
-          <hr>
-        </section>
-
-
-      </header>
-
       <div class="inner cover post post-body">
         {{content}}
       </div>
