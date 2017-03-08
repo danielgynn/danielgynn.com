@@ -50,22 +50,6 @@
   {{! Main compiled script}}
   <script type="text/javascript" src="{{asset "/build/app.js"}}"></script>
 
-  <script type="text/javascript">
-    var books = (function() {
-      var books = null;
-      $.ajax({
-        'async': false,
-        'global': false,
-        'url': "/assets/books.json",
-        'dataType': "json",
-        'success': function (data) {
-          books = data;
-        }
-      });
-      return books;
-    })();
-  </script>
-
   {{! GoSquared tracking code}}
   <script>
     !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(

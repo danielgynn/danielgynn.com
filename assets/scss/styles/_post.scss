@@ -149,5 +149,11 @@
 .list-content {
   .headline {
     text-align: left;
+    line-height: inherit;
+    margin-bottom: 1rem !important;
+
+    @media (max-width: 600px) {
+      line-height: 20px !important;
+    }
   }
 }
