@@ -3,14 +3,14 @@
 
 		<nav class="site-nav">
 			<a class="site-title-link" href="{{@blog.url}}">
-				<h1>{{@blog.title}}</h1>
+				<h1>DG</h1>
 			</a>
 			<div id="hamburgler" class="hamburgler-icon-wrapper">
 				<span class="hamburgler-icon"></span>
 			</div>
 			<ul class="nav">
 				{{#foreach navigation}}
-					<a href="{{url absolute="true"}}"><li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation">{{label}}</li></a>
+					<a class="after-a" href="{{url absolute="true"}}"><li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation">{{label}}</li></a>
 				{{/foreach}}
 			</ul>
 		</nav>

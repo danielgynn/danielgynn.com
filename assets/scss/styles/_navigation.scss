@@ -7,7 +7,7 @@
   top: 0;
 
   .nav {
-    a {
+    .after-a {
       border: 0;
       color: $color-charade;
       opacity: .7;
@@ -30,6 +30,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+
+  @media (max-width: 600px) {
+    padding: 0 1rem;
+  }
 }
 
 .site-title {
@@ -58,8 +62,18 @@
   opacity: 1;
 
   h1 {
-    font-weight: 100;
+    background-color: $color-white;
+    color: lighten($color-charade, 5%);
+    border: 3px solid lighten($color-charade, 5%);
+    padding: .5rem;
+    font-size: 1.5rem;
     font-family: $font-playfair;
+    transition: $transition-all;
+
+    &:hover {
+      background-color: lighten($color-charade, 5%);
+      color: $color-white;
+    }
   }
 
   &::after {
@@ -78,7 +92,7 @@ h4 {
 }
 
 .nav {
-  font-family: $font-roboto;
+  // font-family: $font-roboto;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;

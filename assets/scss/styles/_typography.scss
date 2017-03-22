@@ -6,12 +6,13 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900');
 
 html,
 body {
   background-color: $color-white;
-  font-family: $font-roboto;
-  font-size: 17px;
+  font-family: $font-merriweather;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -31,14 +32,14 @@ h6 {
 }
 
 p {
-  margin-bottom: 19px !important;
+  margin: 0 auto 19px !important;
+  max-width: 36rem;
 }
 
 p,
 ul li {
   margin: 0 auto;
   font-variant: normal;
-  text-align: justify;
   font-weight: normal;
   font-stretch: normal;
   line-height: 30px;
@@ -72,6 +73,14 @@ a:hover {
 }
 
 a {
+  transition: $transition-all;
+
+  &:hover {
+    color: lighten($color-contessa, 20%);
+  }
+}
+
+.after-a {
   position: relative;
   overflow: visible;
   border-bottom: 0;
@@ -182,7 +191,7 @@ blockquote {
 }
 
 ::selection {
-  background: $color-contessa;
+  background: lighten($color-charade, 5%);
   color: $color-white;
 }
 

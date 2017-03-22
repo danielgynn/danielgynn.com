@@ -29,7 +29,9 @@
   }
 
   .post-meta {
+    font-family: $font-roboto;
     color: lighten($color-tundora, 15%);
+    opacity: .7;
     font-weight: 400;
     margin: 0 auto 1rem;
   }
@@ -64,8 +66,10 @@
 }
 
 .blog-blocks {
-  color: $color-tundora;
-  margin: .5rem 0;
+  font-family: $font-roboto;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  text-align: left !important;
 }
 
 .tag {
@@ -150,10 +154,10 @@
   .headline {
     text-align: left;
     line-height: inherit;
-    margin-bottom: 1rem !important;
 
     @media (max-width: 600px) {
-      line-height: 20px !important;
+      line-height: 30px !important;
+      margin-bottom: .5rem !important;
     }
   }
 }

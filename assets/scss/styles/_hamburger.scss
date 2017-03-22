@@ -101,6 +101,10 @@
  .hamburgler-icon-wrapper {
    position: fixed;
    right: 2rem;
-   top: 3rem;
- }
+   //  top: 3rem;
+
+    @media (max-width: 600px) {
+      right: 1rem;
+    }
+  }
 }
