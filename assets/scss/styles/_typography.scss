@@ -33,7 +33,17 @@ h6 {
 
 p {
   margin: 0 auto 19px !important;
-  max-width: 36rem;
+}
+
+.p-wrap {
+  p {
+    max-width: 36rem;
+    margin: 0 auto 19px !important;
+
+    @media (max-width: 600px) {
+      padding: 0 1rem !important;
+    }
+  }
 }
 
 p,
