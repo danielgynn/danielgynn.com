@@ -1,5 +1,5 @@
 .index-page {
-  background-color: $color-charade;
+  background-color: $color-koamaru;
   height: 100vh !important;
   width: 100%;
   margin: 0;
@@ -11,9 +11,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  -webkit-animation: color-change-2x 6s ease-in-out infinite alternate both;
-  -moz-animation: color-change-2x 6s ease-in-out infinite alternate both;
-  animation: color-change-2x 6s ease-in-out infinite alternate both;
+  // -webkit-animation: color-change-2x 6s ease-in-out infinite alternate both;
+  // -moz-animation: color-change-2x 6s ease-in-out infinite alternate both;
+  // animation: color-change-2x 6s ease-in-out infinite alternate both;
 
   ::selection {
     background: $color-white !important;
@@ -25,10 +25,10 @@
   }
 
   .site-header {
-    background-color: $color-charade;
-  	-webkit-animation: color-change-2x 6s ease-in-out infinite alternate both;
-  	-moz-animation: color-change-2x 6s ease-in-out infinite alternate both;
-  	animation: color-change-2x 6s ease-in-out infinite alternate both;
+    background-color: $color-koamaru;
+  	// -webkit-animation: color-change-2x 6s ease-in-out infinite alternate both;
+  	// -moz-animation: color-change-2x 6s ease-in-out infinite alternate both;
+  	// animation: color-change-2x 6s ease-in-out infinite alternate both;
 
     .nav-wrap {
       padding: 1rem 0 0 !important;

@@ -225,7 +225,7 @@ figure:hover figcaption {
   &:hover {
     text-decoration: none;
     color: $color-charade !important;
-    background: $color-white;
+    background: transparent;
   }
 
   @media (max-width: 600px) {
