@@ -1,7 +1,7 @@
 {{!< default}}
 <section>
-  <header class="">
-    <h1 class="headline"><strong>Daniel Gynn</strong> is a freelance developer, designer & writer based in the UK.</h1>
+  <header class="profile-img-wrap">
+    <h1 class="headline"><strong>Daniel Gynn</strong> is a freelance developer, designer and writer.</h1>
   </header>
 
   <div class="p-wrap">
@@ -9,4 +9,29 @@
       {{content}}
     {{/post}}
   </div>
+</section>
+
+<section>
+  <header class="wrap">
+    <h1 class="page-title" id="talks">Technical Talks</h1>
+    <p class="">Recently, I've had the privilege of speaking at a couple of events, mostly centered around JavaScript and the frontend web.</p>
+  </header>
+
+  <div class="profile-img-wrap">
+    <img src="http://i.imgur.com/NDOHhRx.jpg" />
+  </div>
+
+  {{#get "posts" limit="all" include="author,tags" filter="tag:talks"}}
+
+    {{#foreach posts}}
+      <article class="{{post_class}}">
+        <section class="wrap">
+          <h5 class="post-meta">{{{title}}} - <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></h5>
+          <section class="post-excerpt"><p>{{content}}</p></section>
+        </section>
+      </article>
+    {{/foreach}}
+
+  {{/get}}
+
 </section>
