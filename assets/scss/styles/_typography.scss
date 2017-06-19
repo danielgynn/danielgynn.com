@@ -7,11 +7,12 @@
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i');
 
 html,
 body {
   background-color: $color-white;
-  font-family: $font-merriweather;
+  font-family: $font-source;
   font-size: 16px;
   height: 100%;
 }
@@ -33,6 +34,11 @@ h6 {
 
 p {
   margin: 0 auto 19px !important;
+  line-height: 2em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
 }
 
 .p-wrap {
@@ -134,19 +140,22 @@ a {
 .page-title {
   font-size: 2.5rem;
   padding-top: 0;
-  font-weight: 900;
-  font-family: $font-old-standard;
-  text-align: center;
-  font-style: italic;
+  font-family: $font-merriweather;
+  margin-top: 3rem;
   margin-bottom: .5rem;
+  line-height: 1.3em;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .headline {
   font-size: 2.5rem;
   margin: 2rem auto;
-  width: 60%;
+  // width: 60%;
   font-weight: 300;
-  font-family: $font-playfair;
+  font-family: $font-merriweather;
   text-align: center;
   line-height: inherit;
 

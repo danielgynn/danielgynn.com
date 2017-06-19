@@ -5,7 +5,6 @@ body {
 }
 
 main {
-  height: auto !important;
   min-height: 78%;
   margin: 0 auto;
 
@@ -231,4 +230,12 @@ figure:hover figcaption {
   @media (max-width: 600px) {
     right: 10px;
   }
+}
+
+.margin-y {
+  margin: 1rem 0;
+}
+
+.margin-x {
+  margin: 0 1rem;
 }
