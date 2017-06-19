@@ -1,9 +1,11 @@
 @import 'styles/variables';
 
 // Vendors
-@import 'styles/normalize';
-@import 'styles/prism';
-@import 'styles/animista';
+@import 'vendors/normalize';
+@import 'vendors/prism';
+@import 'vendors/animista';
+@import 'vendors/hamburger';
+@import 'vendors/progress';
 
 // Base styles
 @import 'styles/typography';
@@ -14,8 +16,7 @@
 
 // Component-specific styles
 @import 'styles/navigation';
-@import 'styles/hamburger';
-@import 'styles/progress';
+
 
 // Page-specific styles
 @import 'styles/post';

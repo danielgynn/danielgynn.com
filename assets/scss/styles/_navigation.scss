@@ -3,7 +3,8 @@
   background-color: $color-white;
   z-index: 1000000;
   text-align: center;
-  width: 100%;
+  width: 90vw;
+  margin: 0 auto;
   top: 0;
 
   .nav {
@@ -29,11 +30,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
-
-  @media (max-width: 600px) {
-    padding: 0 1rem;
-  }
 }
 
 .site-title {
@@ -64,10 +60,13 @@
   h1 {
     background-color: $color-white;
     color: lighten($color-charade, 5%);
-    border: 3px solid lighten($color-charade, 5%);
+    // border: 3px solid lighten($color-charade, 5%);
     padding: .5rem;
-    font-size: 1.5rem;
-    font-family: $font-playfair;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: $font-spectral;
+    font-weight: 300;
+    font-style: italic;
     transition: $transition-all;
 
     &:hover {
@@ -92,9 +91,8 @@ h4 {
 }
 
 .nav {
-  // font-family: $font-roboto;
   list-style: none;
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
 
   a {

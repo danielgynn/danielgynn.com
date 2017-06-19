@@ -1,5 +1,62 @@
 {{!< default}}
-<section>
+
+<section class="mt5">
+  <h1>Profile</h1>
+  <div class="flex flex-col-mob">
+    <div class="w-40">
+      <img class="profile-img" src="http://i.imgur.com/XqMBXlL.jpg" alt="Self portrait" />
+    </div>
+
+    <div class="w-60">
+      {{#post}}
+        {{content}}
+      {{/post}}
+
+      <div class="details-section">
+        <div class="details-wrapper">
+          <h2>Experience</h2>
+          <div class="details">
+            <span>Repositive</span>
+            <small class="right">2016-2016</small>
+            <small class="bottom">Frontend Developer</small>
+          </div>
+
+          <div class="details">
+            <span>Repositive</span>
+            <small class="right">2015-2016</small>
+            <small class="bottom">Junior Web Developer</small>
+          </div>
+        </div>
+
+        <div class="details-wrapper">
+          <h2>Education</h2>
+          <div class="details">
+            <span>University of Kent</span>
+            <small class="right">2013-2017</small>
+            <small class="bottom">Computer Science with a Year in Industry</small>
+          </div>
+        </div>
+
+        <div class="details-wrapper">
+          <h2>Public Speaking</h2>
+          <div class="details">
+            <span>Ember London</span>
+            <small class="right">11.08.2016</small>
+            <small class="bottom">A Beginner's Journey into Ember.js</small>
+          </div>
+          <div class="details">
+            <span>CambridgeJS</span>
+            <small class="right">11.07.2016</small>
+            <small class="bottom">Building Ambitious Web Applications with Ember.js</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section>
   <header class="profile-img-wrap">
     <h1 class="headline"><strong>Daniel Gynn</strong> is a freelance developer, designer and writer.</h1>
   </header>
@@ -34,4 +91,4 @@
 
   {{/get}}
 
-</section>
+</section> -->

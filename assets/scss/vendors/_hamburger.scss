@@ -108,3 +108,13 @@
     }
   }
 }
+
+.hamburgler-active {
+  .site-header {
+    position: initial !important;
+  }
+
+  main {
+    margin-top: 0;
+  }
+}
