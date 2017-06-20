@@ -126,17 +126,17 @@ figure:hover figcaption {
   }
 }
 
-.site-footer {
-  display: flex;
-  justify-content: center;
+footer {
+  width: 75vw;
+  margin: 0 auto 3rem;
   height: 50px;
   font-size: 15px;
-  font-family: $font-roboto;
+  margin-top: 5rem;
 
   a {
     color: $color-charade;
     opacity: .7;
-    margin: 0 .5rem;
+    margin: 0;
 
     &:hover {
       color: $color-charade !important;
@@ -149,20 +149,9 @@ figure:hover figcaption {
     }
   }
 
-  .fa-2x {
-    font-size: 1.75rem;
-  }
-
   p {
     margin: 0 !important;
     padding: .5rem 0;
-  }
-
-  .footer-icon {
-    display: inline-block;
-    opacity: .75;
-    padding: .25rem;
-    border-bottom: 0 !important;
   }
 }
 
@@ -239,16 +228,6 @@ figure:hover figcaption {
     right: 10px;
   }
 }
-
-.margin-y {
-  margin: 1rem 0;
-}
-
-.margin-x {
-  margin: 0 1rem;
-}
-
-.mt5 { margin-top: 4rem; }
 
 .details-section {
   display: flex;

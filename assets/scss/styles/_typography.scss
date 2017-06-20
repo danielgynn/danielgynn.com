@@ -224,7 +224,6 @@ blockquote {
 }
 
 .fancy-div {
-  margin: 40px 0;
   display: block;
   border: 0;
   text-align: center;
@@ -232,7 +231,7 @@ blockquote {
   &::before {
     font-weight: 900;
     font-style: italic;
-    font-size: 48px;
+    font-size: 56px;
     content: '~';
     display: inline-block;
     position: relative;

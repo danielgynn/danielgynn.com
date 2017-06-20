@@ -6,6 +6,9 @@
 .flex-jsb { justify-content: space-between; }
 .flex-jfe { justify-content: flex-end; }
 
+.flex-dc { flex-direction: column; }
+.flex-dr { flex-direction: row; }
+
 .flex-col-mob {
   @media (max-width: 780px) {
     flex-direction: column;
