@@ -37,18 +37,18 @@
       transition: $transition-all;
 
       &:hover {
-        color: $color-charcoal;
+        color: $color-black;
         opacity: 1;
 
         &::after {
-          background-color: $color-charcoal;
+          background-color: $color-black;
         }
       }
     }
 
     .active {
       opacity: 1;
-      color: $color-koamaru;
+      color: $color-black;
       transition: $transition-all;
     }
   }

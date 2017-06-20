@@ -15,7 +15,7 @@
   border-radius: 1em;
   height: 2px;
   width: 26px;
-  background: lighten($color-charade, 15%);
+  background: lighten($color-black, 15%);
   transition: all .2s ease;
   left: 0;
 }
@@ -61,7 +61,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: $color-charade;
+  background-color: $color-black;
   color: $color-white;
   height: 100%;
   overflow: hidden;
@@ -79,7 +79,7 @@
   transform: translate(-50%, -50%) scale(1.2);
 
   a {
-    color: $color-whitesmoke;
+    color: $color-white;
     text-align: center;
     font-size: 1.5rem;
     border-bottom: 0;

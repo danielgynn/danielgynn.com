@@ -25,39 +25,11 @@
 
     ::selection {
       background: $color-white !important;
-      color: $color-charade !important;
+      color: $color-charcoal !important;
     }
 
     .hamburgler-icon-wrapper {
       display: none !important;
-    }
-
-    .site-header {
-      background-color: $color-koamaru;
-    	-webkit-animation: color-change-2x 6s ease-in-out infinite alternate both;
-    	-moz-animation: color-change-2x 6s ease-in-out infinite alternate both;
-    	animation: color-change-2x 6s ease-in-out infinite alternate both;
-
-      .nav-wrap {
-        padding: 1rem 0 0 !important;
-      }
-
-      .nav {
-        .after-a {
-          color: $color-white;
-          opacity: .7;
-
-          &:hover {
-            color: $color-white;
-            opacity: 1;
-
-            &::after {
-              width: 100%;
-              background-color: $color-white;
-            }
-          }
-        }
-      }
     }
 
     .site-nav {
@@ -127,7 +99,7 @@
         opacity: 1;
 
         &::after {
-          background-color: $color-contessa;
+          background-color: $color-charcoal;
         }
       }
     }

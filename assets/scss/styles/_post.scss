@@ -30,14 +30,14 @@
 
   .post-meta {
     font-family: $font-roboto;
-    color: lighten($color-tundora, 15%);
+    color: lighten($color-black, 15%);
     opacity: .7;
     font-weight: 400;
     margin: 0 auto 1rem;
   }
 
   p:first-child::first-letter {
-    color: $color-contessa;
+    color: $color-charcoal;
     -webkit-initial-letter: 3 2;
     initial-letter: 3 2;
     margin: 0 .2em 0 0;
@@ -54,12 +54,12 @@
   font-size: 1.9rem;
 
   a {
-    color: $color-tundora;
+    color: $color-black;
     transition: color .5s ease;
   }
 
   a:hover {
-    color: $color-contessa;
+    color: $color-charcoal;
     text-decoration: none;
   }
 }
@@ -72,18 +72,18 @@
 }
 
 .tag {
-  background-color: $color-tundora;
+  background-color: $color-black;
 
   a,
   i {
     border: 0;
-    color: $color-whitesmoke;
+    color: $color-white;
   }
 
   &:hover {
     a,
     i {
-      color: $color-contessa;
+      color: $color-charcoal;
       transition: color .4s ease;
     }
   }
@@ -122,11 +122,11 @@
 
 .mini-post-header {
   a {
-    color: $color-contessa;
+    color: $color-charcoal;
     transition: all .5s ease;
 
     &:hover {
-      color: lighten($color-contessa, 15%);
+      color: lighten($color-charcoal, 15%);
     }
   }
 }
