@@ -1,6 +1,10 @@
-.flex {
-  display: flex;
-}
+.flex { display: flex; }
+.flex-ac { align-items: center; }
+
+.flex-jc { justify-content: center; }
+.flex-jsa { justify-content: space-around; }
+.flex-jsb { justify-content: space-between; }
+.flex-jfe { justify-content: flex-end; }
 
 .flex-col-mob {
   @media (max-width: 780px) {
