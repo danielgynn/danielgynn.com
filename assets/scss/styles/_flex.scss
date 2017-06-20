@@ -9,9 +9,13 @@
 .flex-dc { flex-direction: column; }
 .flex-dr { flex-direction: row; }
 
-.flex-col-mob {
-  @media (max-width: 780px) {
+@media (max-width: 780px) {
+  .flex-col-mob {
     flex-direction: column;
+  }
+
+  .flex-afs-mob {
+    align-items: flex-start;
   }
 }
 

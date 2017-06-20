@@ -32,12 +32,14 @@ h1 {
 }
 
 p {
-  margin: 0 auto 19px !important;
+  margin: 0 auto 19px;
   letter-spacing: 0;
+  font-size: 1.06rem;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.06rem;
-  line-height: 2rem;
+  font-variant: normal;
+  font-stretch: normal;
+  line-height: 1.9rem;
   -webkit-font-smoothing: antialiased;
 
   a {
@@ -64,7 +66,6 @@ p {
   }
 }
 
-p,
 ul li {
   margin: 0 auto;
   font-variant: normal;
