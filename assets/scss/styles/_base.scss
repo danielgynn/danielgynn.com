@@ -7,7 +7,7 @@ body {
 main {
   min-height: 78%;
   margin: 0 auto;
-  width: 90vw;
+  width: $page-width;
 
   .wrap {
     margin: 1.5rem auto;
@@ -282,7 +282,6 @@ figure:hover figcaption {
 
       .right {
         flex: 1 auto;
-        text-align: right;
         margin-right: 3rem;
       }
 

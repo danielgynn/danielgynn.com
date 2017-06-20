@@ -1,16 +1,3 @@
-// Responsive
-@media (max-width: 900px) {
-  .book {
-    flex: 0 1 calc(33.3333333% - 1rem) !important;
-  }
-
-  .index-page {
-    .nav {
-      display: block !important;
-    }
-  }
-}
-
 @media (max-width: 780px) {
   .library-wrapper {
     margin: 0 2rem !important;
@@ -47,14 +34,8 @@
     display: block !important;
   }
 
-  .nav {
+  .nav-list {
     display: none;
-  }
-}
-
-@media (min-width: 600px) {
-  .site-nav {
-    display: block;
   }
 }
 
@@ -82,7 +63,7 @@
     display: block !important;
   }
 
-  .nav {
+  .nav-list {
     display: none;
   }
 
@@ -90,11 +71,7 @@
     padding: 0 1rem;
   }
 
-  .site-nav {
-    display: block;
-  }
-
-  .nav>li>a {
+  .nav-list>li>a {
     padding: 10px 5px;
     font-size: 16px;
   }
@@ -107,12 +84,6 @@
 
   img {
     padding: 0 -1rem;
-  }
-
-  .site-header {
-    .nav-wrap {
-      text-align: center;
-    }
   }
 
   .fw-image {

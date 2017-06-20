@@ -1,114 +1,55 @@
-// Navigation
-.site-header {
-  background-color: $color-white;
-  z-index: 1000000;
-  text-align: center;
-  width: 90vw;
+.navigation-bar {
+  width: $page-width;
   margin: 0 auto;
-  top: 0;
 
-  .nav {
-    .after-a {
-      border: 0;
-      color: $color-charade;
-      opacity: .7;
-      transition: all .4s ease-in-out;
+  .title-link {
+    h1 {
+      color: lighten($color-black, 5%);
+      padding: .5rem 0;
+      margin: 1rem 0;
+      font-size: 2rem;
+      font-family: $font-spectral;
+      font-weight: 300;
+      font-style: italic;
+      transition: $transition-all;
 
       &:hover {
-        color: $color-charade;
-        opacity: 1;
-
-        &::after {
-          background-color: $color-contessa;
-        }
+        opacity: .7;
       }
     }
   }
-}
 
-.site-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .nav-list {
+    list-style: none;
 
-.site-title {
-  display: inline-block;
-  margin: 0;
-  transition: all .8s ease-in-out;
-  font-size: 1.2rem;
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: .5rem;
-  background: $color-white;
-  border: 2px solid $color-charade;
-  color: $color-charade;
-
-  &.site-title:hover {
-    background: $color-charade;
-    color: $color-white;
-    cursor: pointer;
-  }
-}
-
-.site-title-link {
-  border-bottom: 0;
-  opacity: 1;
-
-  h1 {
-    background-color: $color-white;
-    color: lighten($color-charade, 5%);
-    // border: 3px solid lighten($color-charade, 5%);
-    padding: .5rem;
-    margin: 1rem 0;
-    font-size: 2rem;
-    font-family: $font-spectral;
-    font-weight: 300;
-    font-style: italic;
-    transition: $transition-all;
-
-    &:hover {
-      background-color: lighten($color-charade, 5%);
-      color: $color-white;
-    }
-  }
-
-  &::after {
-    bottom: 10px;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
-
-h4 {
-  font-size: 1rem;
-  font-weight: 300;
-  opacity: .7;
-}
-
-.nav {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-
-  a {
-    position: relative;
-    display: inline-block;
-    padding: 5px 15px;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
-  .active {
     a {
-      color: $color-charade;
-      transition: all ease .8s;
+      font-style: italic;
+      display: inline-block;
+      padding: .33rem .8rem;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .after-a {
+      opacity: .7;
+      transition: $transition-all;
+
+      &:hover {
+        color: $color-charcoal;
+        opacity: 1;
+
+        &::after {
+          background-color: $color-charcoal;
+        }
+      }
+    }
+
+    .active {
+      opacity: 1;
+      color: $color-koamaru;
+      transition: $transition-all;
     }
   }
 }
