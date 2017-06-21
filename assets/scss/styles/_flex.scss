@@ -1,5 +1,8 @@
 .flex { display: flex !important; }
 .flex-wrap { flex-wrap: wrap; }
+.flex-row-wrap { flex-flow: row wrap; }
+.flex-grow { flex-grow: 1; }
+
 .flex-ac { align-items: center; }
 
 .flex-jc { justify-content: center; }
@@ -10,7 +13,9 @@
 .flex-dc { flex-direction: column; }
 .flex-dr { flex-direction: row; }
 
+.flex-100 { flex: 1 1 100%; max-width: 100%; }
 .flex-50 { flex: 1 1 50%; max-width: 50%; }
+.flex-auto { flex: 1 auto; }
 
 @media (max-width: 780px) {
   .flex-col-mob { flex-direction: column; }
