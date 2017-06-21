@@ -11,3 +11,7 @@
 .mr2 { margin-right: 2rem; }
 
 .m0 { margin: 0; }
+
+@media (max-width: 780px) {
+  .mr0-mob { margin-right: 0; }
+}

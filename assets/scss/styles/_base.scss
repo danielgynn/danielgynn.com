@@ -4,10 +4,13 @@ body {
   background-color: $color-white;
 }
 
+.post-template main { width: $post-width; }
+.home-template main,
+.page-template main { width: $page-width; }
+
 main {
   min-height: 78%;
   margin: 0 auto;
-  width: $page-width;
 
   .wrap {
     margin: 1.5rem auto;
