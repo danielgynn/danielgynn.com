@@ -115,8 +115,8 @@ a {
   position: relative;
   overflow: visible;
   border-bottom: 0;
-  -webkit-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition: $transition-all;
+  transition: $transition-all;
 
   &::after {
     position: absolute;
@@ -130,8 +130,8 @@ a {
     background-color: $color-charcoal;
     content: ' ';
     display: block;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: $transition-all;
+    transition: $transition-all;
   }
 
   &:hover {
@@ -180,11 +180,6 @@ a {
     font-size: 1.5rem;
     width: 95%;
   }
-}
-
-.fa {
-  color: inherit;
-  transition: color .4s ease-in-out;
 }
 
 blockquote {

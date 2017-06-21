@@ -1,0 +1,24 @@
+.post-listing {
+  &::after {
+    border-bottom: 1px solid lighten($color-black, 35%);
+    content: '';
+    left: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    opacity: .7;
+    width: 100%;
+    display: table;
+  }
+
+  h2 {
+    font-weight: 300;
+
+    @media (max-width: 600px) {
+      font-size: 4vw;
+    }
+  }
+
+  p {
+    min-width: 160px;
+  }
+}
