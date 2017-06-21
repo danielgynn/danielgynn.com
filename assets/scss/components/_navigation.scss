@@ -14,7 +14,7 @@
       transition: $transition-all;
 
       &:hover {
-        opacity: .7;
+        opacity: $opacity-fade;
       }
     }
   }
@@ -32,24 +32,27 @@
       }
     }
 
-    .after-a {
-      opacity: .7;
-      transition: $transition-all;
-
-      &:hover {
-        color: $color-black;
-        opacity: 1;
-
-        &::after {
-          background-color: $color-black;
-        }
-      }
-    }
-
     .active {
-      opacity: 1;
+      opacity: $opacity-show;
       color: $color-black;
       transition: $transition-all;
     }
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list>li>a {
+    padding: 10px 5px;
+    font-size: 16px;
   }
 }

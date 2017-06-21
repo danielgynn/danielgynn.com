@@ -1,19 +1,13 @@
-// Typography
-
 // Import from Google Fonts
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url('https://fonts.googleapis.com/css?family=Spectral:300,400,400i,500,500i,700,700i');
 
 html,
 body {
-  background-color: $color-white;
   font-family: $font-spectral;
+  color: $color-black;
   font-size: 18px;
   height: 100%;
-}
-
-body {
-  color: $color-black;
 }
 
 h1,
@@ -24,15 +18,7 @@ h5,
 h6 {
   font-family: $font-roboto;
   line-height: 1.45;
-}
-
-h1 {
-  font-size: 4rem;
-  margin: 0 0 1.5rem;
-
-  @media (max-width: 600px) {
-    font-size: 11vw;
-  }
+  margin-bottom: 1rem;
 }
 
 p {
@@ -59,43 +45,6 @@ p {
  }
 }
 
-.p-wrap {
-  p {
-    max-width: 36rem;
-    margin: 19px auto !important;
-
-    @media (max-width: 600px) {
-      padding: 0 1rem !important;
-    }
-  }
-}
-
-ul li {
-  margin: 0 auto;
-  font-variant: normal;
-  font-weight: normal;
-  font-stretch: normal;
-  line-height: 30px;
-  -webkit-font-smoothing: antialiased;
-}
-
-h2 {
-  font-size: 1.8em;
-}
-
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.2em; }
-h5 { font-size: 1em; }
-h6 { font-size: .8em; }
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 1rem;
-}
-
 a,
 a:focus,
 a:hover {
@@ -111,75 +60,28 @@ a {
   }
 }
 
-.after-a {
-  position: relative;
-  overflow: visible;
-  border-bottom: 0;
-  -webkit-transition: $transition-all;
-  transition: $transition-all;
+h1 {
+  font-size: 4rem;
+  margin: 0 0 1.5rem;
 
-  &::after {
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 0;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    height: 1px;
-    background-color: $color-charcoal;
-    content: ' ';
-    display: block;
-    -webkit-transition: $transition-all;
-    transition: $transition-all;
-  }
-
-  &:hover {
-    border-bottom: 0;
-
-    &::after {
-      width: 100%;
-      background-color: $color-charcoal;
-    }
+  @media (max-width: 600px) {
+    font-size: 11vw;
   }
 }
 
-.intro-header {
-  margin-top: 1rem;
-  font-weight: 300;
-  font-family: $font-roboto;
-  font-size: 1.5rem;
-  text-align: center;
-}
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: .8em; }
 
-.page-title {
-  font-size: 2.5rem;
-  padding-top: 0;
-  margin-top: 3rem;
-  margin-bottom: .5rem;
-  line-height: 1.3em;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.headline {
-  font-size: 2.5rem;
-  margin: 2rem auto;
-  font-weight: 300;
-  text-align: center;
-  line-height: inherit;
-
-  @media (max-width: 880px) {
-    font-size: 2rem;
-    width: 80%;
-  }
-
-  @media (max-width: 780px) {
-    font-size: 1.5rem;
-    width: 95%;
-  }
+ul li {
+  margin: 0 auto;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  -webkit-font-smoothing: antialiased;
 }
 
 blockquote {
@@ -202,33 +104,7 @@ blockquote {
   }
 }
 
-.text-center {
-  text-align: center;
-}
-
 ::selection {
   background: lighten($color-charcoal, 5%);
   color: $color-white;
-}
-
-.fancy-div {
-  display: block;
-  border: 0;
-  text-align: center;
-
-  &::before {
-    font-weight: 900;
-    font-style: italic;
-    font-size: 56px;
-    content: '~';
-    display: inline-block;
-    position: relative;
-    top: -40px;
-  }
-}
-
-.tag-talks {
-  p {
-    margin-bottom: 0 !important;
-  }
 }

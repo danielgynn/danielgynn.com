@@ -22,6 +22,12 @@ img {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 600px) {
+  img {
+    padding: 0 -1rem;
+  }
+}
+
 footer {
   width: 75vw;
   margin: 0 auto 3rem;
@@ -31,44 +37,18 @@ footer {
 
   a {
     color: $color-charcoal;
-    opacity: .7;
+    opacity: $opacity-fade;
     margin: 0;
     transition: $transition-all;
 
     &:hover {
       color: $color-charcoal !important;
-      opacity: 1;
+      opacity: $opacity-show;
     }
   }
 
   p {
     margin: 0 !important;
     padding: .5rem 0;
-  }
-}
-
-// TODO TODO TODO
-
-@media (min-width: 780px) {
-  .w-40 {
-    width: 40%;
-
-    img {
-      width: 90%;
-    }
-  }
-
-  .w-60 {
-    width: 60%;
-  }
-
-  .w-80 {
-    width: 80%;
-  }
-}
-
-@media (max-width: 900px) {
-  .w-100-tab {
-    width: 100%;
   }
 }

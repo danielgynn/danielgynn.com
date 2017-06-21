@@ -1,5 +1,5 @@
-.margin-y { margin: 1rem 0; }
-.margin-x { margin: 0 1rem; }
+// Margins
+.my1 { margin: 1rem 0; }
 
 .mx3 { margin: 0 3rem; }
 
@@ -14,7 +14,20 @@
 
 .m0 { margin: 0; }
 
-.dis-in-bl { display: inline-block; }
+// Display
+.dis-in-bl { display: inline-block !important; }
+
+// Responsive helpers
+@media (min-width: 780px) {
+  .w-40 { width: 40%; img { width: 90%; } }
+  .w-60 { width: 60%; }
+  .w-80 { width: 80%; }
+}
+
+@media (max-width: 900px) {
+  .m0-tab { margin: 0; }
+  .w-100-tab { width: 100%; }
+}
 
 @media (max-width: 780px) {
   .mr0-mob { margin-right: 0; }

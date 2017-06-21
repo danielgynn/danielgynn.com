@@ -13,10 +13,11 @@
 @import 'styles/base';
 @import 'styles/flex';
 @import 'styles/helpers';
-@import 'styles/responsive';
-@import 'styles/navigation';
 
+// Components
+@import 'components/navigation';
 @import 'components/bg-image';
 @import 'components/details-section';
 @import 'components/post-listing';
 @import 'components/scroll-top';
+@import 'components/fancy-div';

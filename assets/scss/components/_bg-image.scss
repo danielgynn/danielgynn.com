@@ -9,7 +9,7 @@
   position: relative;
 
   a {
-    opacity: 0;
+    opacity: $opacity-hide;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -20,7 +20,7 @@
     transition: $transition-all;
 
     &:hover {
-      opacity: 1;
+      opacity: $opacity-show;
     }
 
     div {
@@ -36,7 +36,7 @@
       transition: $transition-all;
 
        &:hover {
-         opacity: .7;
+         opacity: $opacity-fade;
        }
     }
   }

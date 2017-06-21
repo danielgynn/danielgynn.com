@@ -1,19 +1,14 @@
 .home-template {
   background-color: $color-charcoal;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 
   main {
+    color: $color-white !important;
     height: 10rem;
     width: 55vw;
     overflow: hidden;
     margin: auto auto auto 10%;
     padding: 0 !important;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     @media (max-width: 600px) {
       width: 85vw;
@@ -28,28 +23,6 @@
       color: $color-charcoal !important;
     }
 
-    .hamburgler-icon-wrapper {
-      display: none !important;
-    }
-
-    .site-nav {
-      display: block;
-      padding: 0 !important;
-
-      a {
-        font-weight: 700;
-
-        @media (max-width: 600px) {
-          font-size: .75rem !important;
-        }
-      }
-
-      .site-title-link,
-      h4 {
-        display: none;
-      }
-    }
-
     header {
       animation-delay: .2s;
     }
@@ -61,13 +34,6 @@
     .section-two {
       animation-delay: 2.2s;
       margin-bottom: 2rem;
-    }
-
-    h1,
-    h2,
-    p {
-      margin: .5rem 0;
-      color: $color-white !important;
     }
 
     h1 {
@@ -87,16 +53,14 @@
     }
 
     a {
-      text-align: center;
       font-style: italic;
-      border: 0;
-      color: lighten($color-white, 50%);
-      opacity: .7;
+      color: $color-white;
+      opacity: $opacity-fade;
       transition: all .4s ease-in-out;
 
       &:hover {
         color: $color-white;
-        opacity: 1;
+        opacity: $opacity-show;
 
         &::after {
           background-color: $color-charcoal;

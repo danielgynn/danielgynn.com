@@ -24,24 +24,3 @@
   .flex-afs-tab { align-items: flex-start; }
   .flex-100-tab { flex: 1 1 100%; max-width: 100%; }
 }
-
-.flex-column {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 auto;
-  width: 70%;
-
-  .flex-img {
-    display: block;
-    align-items: center;
-    margin: 0 auto;
-    width: 35%;
-    height: 100%;
-  }
-
-  .flex-text {
-    align-items: center;
-    margin-left: 2rem;
-  }
-}

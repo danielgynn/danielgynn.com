@@ -7,7 +7,7 @@
 	</div>
 	<ul class="nav-list">
 		{{#foreach navigation}}
-			<a class="after-a {{#if current}}active{{/if}}" href="{{url absolute="true"}}"><li class="nav-{{label}}" role="presentation">{{label}}</li></a>
+			<a class="{{#if current}}active{{/if}}" href="{{url absolute="true"}}"><li class="nav-{{label}}" role="presentation">{{label}}</li></a>
 		{{/foreach}}
 	</ul>
 </nav>
