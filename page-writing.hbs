@@ -4,8 +4,9 @@
   <h1>Writing</h1>
 
   <div class="flex flex-col-mob">
-    <div class="w-40">
-      <img class="profile-img" src="http://i.imgur.com/FMdmcWl.jpg" alt="MacBook" />
+    <div class="w-40 mr2">
+
+      <img src="http://i.imgur.com/FMdmcWl.jpg" alt="MacBook" />
     </div>
 
     <div class="w-60">
@@ -14,11 +15,17 @@
       {{/post}}
 
       {{#get "posts" limit="all" include="author,tags" filter="tag:learning, tag:books, tag:writing" as |posts pages|}}
+        <div class="post-listing">
+          <p>A collection of <strong>{{pages.total}}</strong> posts on web development, design and books.</p>
+        </div>
         {{#foreach posts}}
           <article class="post-listing {{post_class}}">
-            <section class="flex flex-ac flex-jsb mb1 flex-col-mob flex-afs-mob">
-              <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
-      				<p class="m0 flex flex-jfe"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></p>
+            <section class="mb1">
+              <div class="flex flex-ac flex-jsb flex-col-tab flex-afs-tab">
+                <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
+                <p class="m0 flex flex-jfe flex-jfs-mob"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></p>
+              </div>
+              {{#if tags}}<small>Posted in {{tags separator=", "}}.</small>{{/if}}
             </section>
           </article>
         {{/foreach}}
