@@ -207,20 +207,24 @@ footer {
 }
 
 .scroll-top {
-	width: 50px;
-	height: 50px;
+	width: 25px;
+	height: 25px;
+  font-size: 2rem;
 	padding: 10px;
 	text-align: center;
 	background: $color-charcoal;
 	color: $color-white;
   border: 2px solid $color-charcoal;
   border-radius: 50%;
-	text-decoration: none;
 	position: fixed;
 	bottom: 50px;
 	right: 60px;
 	display: none;
   transition: background .4s ease-in-out;
+
+  span {
+    padding-bottom: 5px;
+  }
 
   &:hover {
     text-decoration: none;
