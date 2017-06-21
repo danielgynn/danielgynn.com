@@ -1,16 +1,4 @@
 @media (max-width: 780px) {
-  .library-wrapper {
-    margin: 0 2rem !important;
-  }
-
-  .book {
-    flex: 0 1 calc(50% - .5rem) !important;
-  }
-
-  .wrap {
-    padding: 0 1rem;
-  }
-
   figure {
     padding: 0;
   }
@@ -65,10 +53,6 @@
 
   .nav-list {
     display: none;
-  }
-
-  .wrap {
-    padding: 0 1rem;
   }
 
   .nav-list>li>a {
