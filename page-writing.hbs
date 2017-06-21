@@ -20,11 +20,11 @@
         {{#foreach posts}}
           <article class="post-listing {{post_class}}">
             <section class="mb1">
-              <div class="flex flex-ac flex-jsb flex-col-tab flex-afs-tab">
-                <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
-                <p class="m0 flex flex-jfe flex-jfs-mob"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></p>
+              <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
+              <div class="flex flex-ac flex-jsb">
+                <p class="m0 flex flex-jfs"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></p>
+                {{#if tags}}<small class="flex flex-jfe dis-no-mob">Posted in {{tags separator=", "}}.</small>{{/if}}
               </div>
-              {{#if tags}}<small>Posted in {{tags separator=", "}}.</small>{{/if}}
             </section>
           </article>
         {{/foreach}}
