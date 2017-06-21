@@ -1,17 +1,17 @@
 {{!< home-default}}
-<nav class="section-one animated fadeInUp">
-  {{navigation}}
-</nav>
 
-<header class="animated fadeInUp">
+<header class="my1 animated fadeInUp">
   <h1>{{@blog.title}}</h1>
-  <h2>{{@blog.description}}</h2>
 </header>
 
-<section class="icon-banner section-two animated fadeInUp">
-  <a href="https://twitter.com/danielgynn" class="footer-icon"><i class="fa fa-twitter fa-2x"></i></a>
-  <a href="https://github.com/danielgynn" class="footer-icon"><i class="fa fa-github fa-2x"></i></a>
-  <a href="https://www.instagram.com/danielgynn/" class="footer-icon"><i class="fa fa-instagram fa-2x"></i></a>
-  <a href="https://uk.linkedin.com/in/danielgynn" class="footer-icon"><i class="fa fa-linkedin fa-2x"></i></a>
-  <a href="mailto:danielgynn94@gmail.com" class="footer-icon"><i class="fa fa-envelope-o fa-2x"></i></a>
-</section>
+<div class="w-80 section-one animated fadeInUp">
+  <p>{{@blog.description}}</p>
+</div>
+
+<nav class="my1 section-two animated fadeInUp">
+  <a href="/profile">Profile.</a>
+  <a href="/writing">Writing.</a>
+  <a href="/photography">Photography.</a>
+  <a href="https://twitter.com/danielgynn">Twitter.</a>
+  <a href="https://github.com/danielgynn">GitHub.</a>
+</nav>

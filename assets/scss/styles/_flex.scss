@@ -1,20 +1,33 @@
-.flex-column {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 auto;
-  width: 70%;
+.flex { display: flex !important; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-row-wrap { flex-flow: row wrap; }
+.flex-grow { flex-grow: 1; }
 
-  .flex-img {
-    display: block;
-    align-items: center;
-    margin: 0 auto;
-    width: 35%;
-    height: 100%;
-  }
+.flex-ac { align-items: center; }
 
-  .flex-text {
-    align-items: center;
-    margin-left: 2rem;
-  }
+.flex-jc { justify-content: center; }
+.flex-jsa { justify-content: space-around; }
+.flex-jsb { justify-content: space-between; }
+.flex-jfe { justify-content: flex-end; }
+
+.flex-dc { flex-direction: column; }
+.flex-dr { flex-direction: row; }
+
+.flex-100 { flex: 1 1 100%; max-width: 100%; }
+.flex-50 { flex: 1 1 50%; max-width: 50%; }
+.flex-33 { flex: 1 1 33%; max-width: 33%; }
+.flex-auto { flex: 1 auto; }
+
+@media (max-width: 780px) {
+  .flex-col-mob { flex-direction: column; }
+  .flex-afs-mob { align-items: flex-start; }
+  .flex-jfs-mob { justify-content: flex-start; }
+  .flex-100-mob { flex: 1 1 100% !important; max-width: 100% !important; }
+}
+
+@media (max-width: 950px) {
+  .flex-col-tab { flex-direction: column; }
+  .flex-afs-tab { align-items: flex-start; }
+  .flex-50-tab { flex: 1 1 50%; max-width: 50%; }
+  .flex-100-tab { flex: 1 1 100%; max-width: 100%; }
 }

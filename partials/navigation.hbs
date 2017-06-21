@@ -1,22 +1,16 @@
-<header class="site-header" role="banner">
-	<section class="nav-wrap">
-
-		<nav class="site-nav">
-			<a class="site-title-link" href="{{@blog.url}}">
-				<h1>DG</h1>
-			</a>
-			<div id="hamburgler" class="hamburgler-icon-wrapper">
-				<span class="hamburgler-icon"></span>
-			</div>
-			<ul class="nav">
-				{{#foreach navigation}}
-					<a class="after-a" href="{{url absolute="true"}}"><li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation">{{label}}</li></a>
-				{{/foreach}}
-			</ul>
-		</nav>
-
-	</section>
-</header>
+<nav class="flex flex-ac flex-jsb navigation-bar" role="banner">
+	<a class="title-link" href="{{@blog.url}}">
+		<h1>Daniel Gynn.</h1>
+	</a>
+	<div id="hamburgler" class="hamburgler-icon-wrapper">
+		<span class="hamburgler-icon"></span>
+	</div>
+	<ul class="nav-list">
+		{{#foreach navigation}}
+			<a class="{{#if current}}active{{/if}}" href="{{url absolute="true"}}"><li class="nav-{{label}}" role="presentation">{{label}}</li></a>
+		{{/foreach}}
+	</ul>
+</nav>
 
 <div class="hamburgler-menu">
 	<ul class="hamburgler-menu-list">

@@ -54,7 +54,7 @@ pre[class*="language-"] {
 }
 
 .namespace {
-	opacity: .7;
+	opacity: $opacity-fade;
 }
 
 .token.property,

@@ -1,31 +1,38 @@
 {{!< default}}
-<section class="wrap">
-  <h1 class="page-title">Photography</h1>
 
-  {{#post}}
-    {{content}}
-  {{/post}}
-</section>
+<section class="mt4">
+  <h1>Photography</h1>
 
-<section class="photo-wrap">
+  <div class="mr2 mr0-mob">
+    {{#get "posts" limit="all" include="author,tags" filter="tag:photography" as |posts pages|}}
+      A collection of <strong>{{pages.total}}</strong> photographic stories, told with <a href="http://danielgynn.exposure.co">Exposure</a>.
+    {{/get}}
+    {{#post}}
+      {{content}}
+    {{/post}}
+  </div>
 
-  {{#get "posts" limit="all" include="author,tags" filter="tag:photography"}}
-
-    {{#foreach posts}}
-        <article class="tag-photography">
-          <a class="pg-link-cover" href="https://danielgynn.exposure.co{{url}}" target="_blank"></a>
-          <img class="pg-cover" src="{{@image}}" />
-          <div class="pg-content">
-            <a href="https://danielgynn.exposure.co{{url}}" target="_blank">
-              <div class="pg-meta">
-                <h1>{{{title}}}</h1>
-                <h3><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time></h3>
-              </div>
-            </a>
+  <div class="w-100-tab flex flex-wrap">
+    {{#get "posts" limit="all" include="author,tags" filter="tag:photography"}}
+      {{#foreach posts}}
+        <div class="flex-33 flex-50-tab flex-100-mob">
+          <div class="card mr2 mr0-mob mb2">
+            <div class="bg-image" style="background-image: url({{@image}});">
+              <a class="flex flex-jc flex-ac" href="https://danielgynn.exposure.co{{url}}" target="_blank">
+                <div>
+                  Open in Exposure
+                </div>
+              </a>
+            </div>
+            <div class="flex flex-ac flex-jsb flex-col-tab flex-afs-tab">
+              <h2 class="m0 mr1">
+                <a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
+              </h2>
+              <p class="m0 flex flex-jfe flex-jfs-mob"><time datetime="{{date format="DD-MM-YY"}}">{{date format='MMMM, YYYY'}}</time></p>
+            </div>
           </div>
-        </article>
-    {{/foreach}}
-
-  {{/get}}
-
+        </div>
+        {{/foreach}}
+    {{/get}}
+  </div>
 </section>

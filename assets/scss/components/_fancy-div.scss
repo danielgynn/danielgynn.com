@@ -1,0 +1,15 @@
+.fancy-div {
+  display: block;
+  border: 0;
+  text-align: center;
+
+  &::before {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 56px;
+    content: '~';
+    display: inline-block;
+    position: relative;
+    top: -40px;
+  }
+}

@@ -5,48 +5,13 @@ body {
 }
 
 main {
-  height: auto !important;
+  width: $page-width;
   min-height: 78%;
   margin: 0 auto;
 
   .wrap {
     margin: 1.5rem auto;
-  }
-}
-
-.hamburgler-active {
-  .site-header {
-    position: initial !important;
-  }
-
-  main {
-    margin-top: 0;
-  }
-}
-
-.wrap {
-  margin: 0 auto;
-  max-width: 36rem;
-}
-
-.img-wrap {
-  max-width: 52rem;
-  display: block;
-  margin: 0 auto;
-}
-
-.profile-img-wrap {
-  max-width: 42rem !important;
-  display: block;
-  margin: 0 auto;
-}
-
-.intro-hero {
-  margin: 0 auto 3rem;
-  max-width: 50rem;
-
-  hr {
-    margin-top: 3rem;
+    max-width: 36rem;
   }
 }
 
@@ -54,181 +19,36 @@ img {
   height: auto;
   max-width: 100%;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
-figure {
-  margin: 1rem 0;
-
-  .fig-cap {
-    display: block;
-    overflow: hidden;
-    position: relative;
+@media (max-width: 600px) {
+  img {
+    padding: 0 -1rem;
   }
 }
 
-figcaption {
-  position: absolute;
-  background: rgba(0, 0, 0, .75);
-  color: $color-white;
-  padding: 10px 20px;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all .6s ease;
-  -moz-transition: all .6s ease;
-  -o-transition: all .6s ease;
-}
-
-figure:hover figcaption {
-  left: 0;
-  opacity: 1;
-}
-
-.fw-image {
-  min-height: 100vh;
-
-  .full-width-image {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-  }
-}
-
-.selfie {
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-}
-
-.image-header {
-  min-height: 300px;
-
-  .post-image {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 300px;
-    background-size: contain;
-    border: 0;
-  }
-}
-
-.site-footer {
-  display: flex;
-  justify-content: center;
+footer {
+  width: 75vw;
+  margin: 0 auto 3rem;
   height: 50px;
   font-size: 15px;
-  font-family: $font-roboto;
+  margin-top: 5rem;
 
   a {
-    color: $color-charade;
-    opacity: .7;
-    margin: 0 .5rem;
+    color: $color-charcoal;
+    opacity: $opacity-fade;
+    margin: 0;
+    transition: $transition-all;
 
     &:hover {
-      color: $color-charade !important;
-      opacity: 1;
+      color: $color-charcoal !important;
+      opacity: $opacity-show;
     }
-
-    &::after,
-    &:hover::after {
-      background-color: initial;
-    }
-  }
-
-  .fa-2x {
-    font-size: 1.75rem;
   }
 
   p {
     margin: 0 !important;
     padding: .5rem 0;
-  }
-
-  .footer-icon {
-    display: inline-block;
-    opacity: .75;
-    padding: .25rem;
-    border-bottom: 0 !important;
-  }
-}
-
-.share {
-  a {
-    margin: 0 5px;
-  }
-}
-
-.hero-overlay {
-  position: relative;
-  padding: 1em 0;
-  clear: both;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  h1 {
-    color: $color-tundora;
-    font-size: 4.5rem;
-    margin: 0 !important;
-  }
-
-  h3 {
-    color: $color-tundora;
-    margin-top: 0 !important;
-    text-align: center;
-  }
-}
-
-.center-align {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.no-margin {
-  margin: 0 !important;
-}
-
-.home-list {
-  h5 {
-    margin-top: 10px !important;
-  }
-}
-
-.pagination {
-  display: block;
-}
-
-.scroll-top {
-	width: 50px;
-	height: 50px;
-	padding: 10px;
-	text-align: center;
-	background: $color-charade;
-	color: $color-white;
-  border: 2px solid $color-charade;
-  border-radius: 50%;
-	text-decoration: none;
-	position: fixed;
-	bottom: 50px;
-	right: 60px;
-	display: none;
-  transition: background .4s ease-in-out;
-
-  &:hover {
-    text-decoration: none;
-    color: $color-charade !important;
-    background: transparent;
-  }
-
-  @media (max-width: 600px) {
-    right: 10px;
   }
 }

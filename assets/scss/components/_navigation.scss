@@ -1,0 +1,58 @@
+.navigation-bar {
+  width: $page-width;
+  margin: 0 auto;
+
+  .title-link {
+    h1 {
+      color: lighten($color-black, 5%);
+      padding: .5rem 0;
+      margin: 1rem 0;
+      font-size: 2rem;
+      font-family: $font-spectral;
+      font-weight: 300;
+      font-style: italic;
+      transition: $transition-all;
+
+      &:hover {
+        opacity: $opacity-fade;
+      }
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+
+    a {
+      font-style: italic;
+      display: inline-block;
+      padding: .33rem .8rem;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .active {
+      opacity: $opacity-show;
+      color: $color-black;
+      transition: $transition-all;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list>li>a {
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+}

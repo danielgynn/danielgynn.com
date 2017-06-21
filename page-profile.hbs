@@ -1,12 +1,56 @@
 {{!< default}}
-<section>
-  <header class="">
-    <h1 class="headline"><strong>Daniel Gynn</strong> is a freelance developer, designer & writer based in the UK.</h1>
-  </header>
 
-  <div class="p-wrap">
-    {{#post}}
-      {{content}}
-    {{/post}}
+<section class="mt4">
+  <h1>Profile</h1>
+  <div class="flex flex-col-mob">
+    <div class="w-40">
+      <img class="profile-img" src="http://i.imgur.com/XqMBXlL.jpg" alt="Self portrait" />
+    </div>
+
+    <div class="w-60">
+      {{#post}}
+        {{content}}
+      {{/post}}
+
+      <div class="flex flex-wrap">
+        <div class="details-wrapper flex-50">
+          <h2>Experience</h2>
+          <div class="flex flex-row-wrap flex-jsb mb1">
+            <span class="flex-grow flex-auto"><a href="https://repositive.io">Repositive</a></span>
+            <small class="flex flex-ac flex-jfe flex-auto mr3">2016-2017</small>
+            <small class="flex-100">Frontend Developer</small>
+          </div>
+
+          <div class="flex flex-row-wrap flex-jsb mb1">
+            <span class="flex-grow flex-auto"><a href="https://repositive.io">Repositive</a></span>
+            <small class="flex flex-ac flex-jfe flex-auto mr3">2015-2016</small>
+            <small class="flex-100">Junior Web Developer</small>
+          </div>
+        </div>
+
+        <div class="details-wrapper flex-50">
+          <h2>Education</h2>
+          <div class="flex flex-row-wrap flex-jsb mb1">
+            <span class="flex-grow flex-auto">University of Kent</span>
+            <small class="flex flex-ac flex-jfe flex-auto mr3">2013-2017</small>
+            <small class="flex-100">Computer Science with a Year in Industry</small>
+          </div>
+        </div>
+
+        <div class="details-wrapper flex-50">
+          <h2>Public Speaking</h2>
+          <div class="flex flex-row-wrap flex-jsb mb1">
+            <span class="flex-grow flex-auto"><a href="https://vimeo.com/178828815">Ember London</a></span>
+            <small class="flex flex-ac flex-jfe flex-auto mr3">11.08.2016</small>
+            <small class="flex-100">A Beginner's Journey into Ember.js</small>
+          </div>
+          <div class="flex flex-row-wrap flex-jsb mb1">
+            <span class="flex-grow flex-auto"><a href="http://danielgynn-cambjs.surge.sh/">CambridgeJS</a></span>
+            <small class="flex flex-ac flex-jfe flex-auto mr3">11.07.2016</small>
+            <small class="flex-100">Building Ambitious Web Applications with Ember.js</small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

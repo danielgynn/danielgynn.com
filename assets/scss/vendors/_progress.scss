@@ -22,7 +22,7 @@ progress {
   background-color: transparent;
 
   // Progress bar value for IE10+
-  color: $color-contessa;
+  color: $color-charcoal;
 }
 
 progress::-webkit-progress-bar {
@@ -30,9 +30,9 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: $color-contessa;
+  background-color: $color-charcoal;
 }
 
 progress::-moz-progress-bar {
-  background-color: $color-contessa;
+  background-color: $color-charcoal;
 }

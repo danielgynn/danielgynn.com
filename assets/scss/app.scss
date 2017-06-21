@@ -1,24 +1,23 @@
+// Project variables
 @import 'styles/variables';
 
 // Vendors
-@import 'styles/normalize';
-@import 'styles/prism';
-@import 'styles/animista';
+@import 'vendors/normalize';
+@import 'vendors/prism';
+@import 'vendors/hamburger';
+@import 'vendors/progress';
 
 // Base styles
 @import 'styles/typography';
 @import 'styles/index';
 @import 'styles/base';
 @import 'styles/flex';
-@import 'styles/responsive';
+@import 'styles/helpers';
 
-// Component-specific styles
-@import 'styles/navigation';
-@import 'styles/hamburger';
-@import 'styles/progress';
-
-// Page-specific styles
-@import 'styles/post';
-@import 'styles/photography';
-@import 'styles/resume';
-@import 'styles/library';
+// Components
+@import 'components/navigation';
+@import 'components/bg-image';
+@import 'components/details-section';
+@import 'components/post-listing';
+@import 'components/scroll-top';
+@import 'components/fancy-div';
