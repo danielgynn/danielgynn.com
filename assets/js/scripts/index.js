@@ -3,10 +3,12 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
 			$('.scroll-top').fadeIn();
-      $('.scroll-top').addClass('flex flex-ac flex-jc');
+      $('.scroll-top').addClass('flex flex-ac flex-jc opa-show');
+			$('.scroll-top').removeClass('opa-hide');
 		} else {
 			$('.scroll-top').fadeOut();
-      $('.scroll-top').removeClass('flex flex-ac flex-jc');
+      $('.scroll-top').addClass('opa-hide');
+			$('.scroll-top').removeClass('opa-show');
 		}
 	});
 

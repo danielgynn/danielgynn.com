@@ -3,6 +3,7 @@
 
 .mx3 { margin: 0 3rem; }
 
+.mt3 { margin-top: 3rem; }
 .mt4 { margin-top: 4rem; }
 
 .mb1 { margin-bottom: 1rem; }
@@ -17,6 +18,9 @@
 
 // Display
 .dis-in-bl { display: inline-block !important; }
+
+.opa-show { opacity: $opacity-show !important; }
+.opa-hide { opacity: $opacity-hide !important; }
 
 // Responsive helpers
 @media (min-width: 780px) {

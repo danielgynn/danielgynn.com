@@ -5,7 +5,7 @@
     left: 0;
     margin-bottom: 1rem;
     position: relative;
-    opacity: $opacity-fade;
+    opacity: .3;
     width: 100%;
     display: table;
   }
@@ -14,7 +14,7 @@
     font-weight: 300;
 
     @media (max-width: 600px) {
-      font-size: 4vw;
+      font-size: 6vw;
     }
   }
 
