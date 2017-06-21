@@ -11,7 +11,8 @@
   }
 
   h2 {
-    font-weight: 300;
+    line-height: 2.2rem;
+    padding-bottom: .5rem;
 
     @media (max-width: 600px) {
       font-size: 6vw;

@@ -7,7 +7,7 @@
       <p class="dis-in-bl m0 flex flex-jfs"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time>{{#if tags}}. Posted in {{tags separator=", "}}.{{/if}}</p>
     </header>
     <section class="wrap">
-      <img src="{{image}}" alt="post-banner" />
+      {{#if image}}<img src="{{image}}" alt="post-banner" />{{/if}}
       <div class="mb3">
         {{content}}
       </div>
