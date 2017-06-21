@@ -1,37 +1,40 @@
 {{!< default}}
-{{#is "tag"}}
-	{{#tag}}
-		<header class="wrap">
-		  <h1 class="page-title">{{name}}</h1>
-		  <p class="text-center">A collection of <strong>{{total}}</strong> posts tagged with {{name}}.</p>
-			<!-- <p>{{description}}</p> -->
-		</header>
 
-		{{#if image}}
-			<div class="img-wrap">
-			  <img src="{{image}}" />
-			<div>
-		{{/if}}
-	{{/tag}}
+<section class="mt4">
+	{{#is "tag"}}
+		{{#tag}}
+		  <h1>Writing</h1>
 
-	<section class="wrap">
-		{{#foreach posts limit="all"}}
-			<article class="{{post_class}}">
-				<section class="list-content">
-					<header class="cover post post-head">
-						<h1 class="cover-heading post-title headline"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
-						<section class="blog-blocks">
-							<span>Posted on <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time> {{#if tags}}in {{tags separator=", "}}{{/if}}</span>
-						</section>
-					</header>
-					<section class="post-excerpt">
-						<div class="cover post post-body">
-							<p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
-						</div>
-					</section>
-				</section>
-				<hr class="post-hr" />
-			</article>
-		{{/foreach}}
-	</section>
-{{/is}}
+		  <div class="flex flex-col-mob">
+		    <div class="w-40 mr2 mr0-mob">
+			     {{#if image}}<img src="{{image}}" alt="Tag image" />{{else}}<img src="http://i.imgur.com/FMdmcWl.jpg" alt="MacBook" />{{/if}}
+		    </div>
+
+		    <div class="w-60">
+		      {{#post}}
+		        {{content}}
+		      {{/post}}
+
+	        <div class="post-listing">
+						<p class="flex flex-jsb">
+							<span>Posts on {{name}}. </span>
+							<a href="/writing">&#8592; Back to all posts</a>
+						</p>
+	          {{#if description}}<p>{{description}}</p>{{/if}}
+	        </div>
+				{{/tag}}
+				{{#foreach posts limit="all"}}
+          <article class="post-listing {{post_class}}">
+            <section class="mb1">
+              <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
+              <div class="flex flex-ac flex-jsb">
+                <p class="m0 flex flex-jfs"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time></p>
+                {{#if tags}}<small class="dis-no-mob dis-in-bl">Posted in {{tags separator=", "}}.</small>{{/if}}
+              </div>
+            </section>
+          </article>
+        {{/foreach}}
+	    </div>
+	  </div>
+	{{/is}}
+</section>

@@ -4,11 +4,8 @@ body {
   background-color: $color-white;
 }
 
-.post-template main,
-.home-template main,
-.page-template main { width: $page-width; }
-
 main {
+  width: $page-width;
   min-height: 78%;
   margin: 0 auto;
 
