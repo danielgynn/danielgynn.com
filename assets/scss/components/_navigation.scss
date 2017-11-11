@@ -1,16 +1,23 @@
 .navigation-bar {
   width: $page-width;
   margin: 0 auto;
+  border-bottom: 1px solid darken($color-grey, 10%);
+
+  @media (max-width: 780px) {
+    width: 90%;
+  }
 
   .title-link {
+    img {
+      margin: 1rem 0 !important;
+    }
+
     h1 {
       color: lighten($color-black, 5%);
       padding: .5rem 0;
-      margin: 1rem 0;
+      margin: .5rem 0 !important;
       font-size: 2rem;
-      font-family: $font-spectral;
-      font-weight: 300;
-      font-style: italic;
+      font-family: $font-playfair;
       transition: $transition-all;
 
       &:hover {
@@ -36,6 +43,17 @@
       opacity: $opacity-show;
       color: $color-black;
       transition: $transition-all;
+    }
+  }
+
+  &.home-navigation-bar {
+    border-bottom: 0;
+    height: 100px;
+
+    .hamburgler-icon,
+    .hamburgler-icon::before,
+    .hamburgler-icon::after {
+      background-color: $color-white;
     }
   }
 }

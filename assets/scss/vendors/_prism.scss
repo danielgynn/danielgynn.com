@@ -21,6 +21,14 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+	span {
+		text-transform: none;
+		opacity: 1;
+		font-family: Consolas, Monaco, 'Andale Mono', monospace;
+		font-weight: 400;
+		font-size: 12px;
+	}
 }
 
 // Code blocks

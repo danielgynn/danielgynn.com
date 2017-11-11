@@ -1,6 +1,6 @@
 .hamburgler-icon-wrapper {
   position: relative;
-  display: none;
+  display: block;
   height: 26px;
   width: 26px;
   cursor: pointer;
@@ -72,7 +72,7 @@
 
  .hamburgler-icon-wrapper {
    position: fixed;
-   right: 2rem;
+   right: 13vw;
 
     @media (max-width: 600px) {
       right: 1rem;

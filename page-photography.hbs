@@ -17,13 +17,9 @@
       {{#foreach posts}}
         <div class="flex-33 flex-50-tab flex-100-mob">
           <div class="card mr2 mr0-mob mb2">
-            <div class="bg-image" style="background-image: url({{@image}});">
-              <a class="flex flex-jc flex-ac" href="https://danielgynn.exposure.co{{url}}" target="_blank">
-                <div>
-                  Open in Exposure
-                </div>
-              </a>
-            </div>
+            <a href="https://danielgynn.exposure.co{{url}}" target="_blank">
+              <img data-src="{{@image}}" class="lazyload ph-image" />
+            </a>
             <div class="flex flex-ac flex-jsb flex-col-tab flex-afs-tab">
               <h2 class="m0 mr1">
                 <a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>

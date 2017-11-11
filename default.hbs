@@ -24,12 +24,9 @@
   {{! Content }}
   {{navigation}}
   <main>
-    <article>
-      <section class="page__content">
-        {{{body}}}
-        <a href="#" class="scroll-top"><span>↑</span></a>
-      </section>
-    </article>
+    <section class="page__content">
+      {{{body}}}
+    </section>
   </main>
 
   {{> footer}}
@@ -39,6 +36,7 @@
 
   {{! Scripts}}
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.0.1/lazyload.min.js"></script>
   <script type="text/javascript" src="{{asset "/build/app.js"}}"></script>
 
   {{! GoSquared tracking code}}
