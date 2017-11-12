@@ -1,23 +1,35 @@
 {{!< default}}
 
-<section class="mt4">
-  <h1>Writing</h1>
-  <div>
-    <p>A collection of <strong>{{pages.total}}</strong> posts on web development, design and books.</p>
+<section class="mt6">
+  <h1 class="center tc pt3 pl3 mw6 pr3 f3 f3-ns lh-copy">Blog</h1>
+
+  {{#get "posts" limit="all" filter="tags:[learning, books, writing]" as |posts pages|}}
+    <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">
+      A collection of <strong>{{pages.total}}</strong> posts on web development, design and books.
+    </p>
+  {{/get}}
+
+  <div class="mw6 center bb b--light-gray pt2"></div>
+
+  <div class="center mw6 pl3 pr3 pl0-ns pr0-ns pb3 pb6-ns f4 pt4-ns lh-copy black-80">
+    {{#get "posts" limit="all" include="author,tags" filter="featured:false+tags:[learning, books, writing]" as |posts pages|}}
+      {{#foreach posts}}
+        <article class="{{post_class}}">
+          <section class="list tl-ns f4 pt2 pb2 dim-subtle mb1">
+            <a class="fw7" href="{{url}}">{{{title}}}</a>
+            <p class="mb0 pt1">{{excerpt characters="140"}}...</p>
+            <date class="db i black-30 pb4 f5">{{date format='DD MMMM, YYYY'}}</date>
+          </section>
+        </article>
+      {{/foreach}}
+    {{/get}}
   </div>
 
   <div class="flex flex-col-mob">
-    <!-- <div class="w-40 mr2 mr0-mob">
-      <img src="http://i.imgur.com/FMdmcWl.jpg" alt="MacBook" />
-    </div> -->
-
     <div class="w-100">
-      {{#post}}
-        {{content}}
-      {{/post}}
 
       <div class="flex-col-mob flex-col-tab">
-        <div class="w-100 w-100-tab mb2">
+        <!-- <div class="w-100 w-100-tab mb2">
           {{#get "posts" limit="1" include="author,tags" filter="featured:true" as |posts pages|}}
 
             {{#foreach posts}}
@@ -32,31 +44,15 @@
                     <p>{{excerpt characters="240"}}...</p>
                     <span>Posted {{date format='DD MMMM, YYYY'}}</span>
                     <!-- <a href="{{url}}">READ MORE</a> -->
-                  </div>
+                  <!-- </div>
                 </section>
               </article>
             {{/foreach}}
           {{/get}}
-        </div>
+        </div> -->
 
         <div class="w-100 w-100-tab">
-          {{#get "posts" limit="all" include="author,tags" filter="featured:false+tags:[learning, books, writing]" as |posts pages|}}
 
-            {{#foreach posts}}
-              <article class="post-listing {{post_class}}">
-                <header>
-                  <a href="{{url}}"><img class="lazyload" data-src="{{image}}" /></a>
-                </header>
-                <section class="mb1">
-                  <h2 class="m0 mr1"><a href="{{url}}">{{{title}}}</a></h1>
-                  <span>Posted {{date format='DD MMMM, YYYY'}}</span>
-                  <div class="flex flex-ac flex-jsb">
-                    <!-- {{#if tags}}<small class="dis-no-mob dis-in-bl">Posted in {{tags separator=", "}}.</small>{{/if}} -->
-                  </div>
-                </section>
-              </article>
-            {{/foreach}}
-          {{/get}}
         </div>
       </div>
 

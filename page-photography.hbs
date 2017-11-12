@@ -1,30 +1,30 @@
 {{!< default}}
 
-<section class="mt4">
-  <h1>Photography</h1>
+<section class="mt6">
+  <h1 class="center tc pt3 pl3 mw6 pr3 f3 f3-ns lh-copy">Photography</h1>
 
   <div class="mr2 mr0-mob">
     {{#get "posts" limit="all" include="author,tags" filter="tag:photography" as |posts pages|}}
-      A collection of <strong>{{pages.total}}</strong> photographic stories, told with <a href="http://danielgynn.exposure.co">Exposure</a>.
+      <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">
+        A collection of <strong>{{pages.total}}</strong> photographic stories, told with <a href="http://danielgynn.exposure.co">Exposure</a>.
+        You can check out more of my photography on <a href="http://instagram.com/danielgynn">Instagram</a> and <a href="https://www.flickr.com/photos/danielgynn/">Flickr</a>.
+      </p>
     {{/get}}
-    {{#post}}
-      {{content}}
-    {{/post}}
   </div>
 
-  <div class="w-100-tab flex flex-wrap">
+  <div class="mw6 center bb b--light-gray pt2"></div>
+
+  <div class="center mw6 pl3 pr3 pl0-ns pr0-ns pb3 pb6-ns f4 pt4-ns lh-copy black-80 w-100-tab flex flex-wrap">
     {{#get "posts" limit="all" include="author,tags" filter="tag:photography"}}
       {{#foreach posts}}
-        <div class="flex-33 flex-50-tab flex-100-mob">
+        <div class="flex-100-mob">
           <div class="card mr2 mr0-mob mb2">
             <a href="https://danielgynn.exposure.co{{url}}" target="_blank">
-              <img data-src="{{@image}}" class="lazyload ph-image" />
+              <img src="{{@image}}" class="lazyload ph-image" />
             </a>
-            <div class="flex flex-ac flex-jsb flex-col-tab flex-afs-tab">
-              <h2 class="m0 mr1">
-                <a href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
-              </h2>
-              <p class="m0 flex flex-jfe flex-jfs-mob"><time datetime="{{date format="DD-MM-YY"}}">{{date format='MMMM, YYYY'}}</time></p>
+            <div>
+              <a class="fw7" href="https://danielgynn.exposure.co{{url}}" target="_blank">{{{title}}}</a>
+              <date class="db i black-30 pb4 f5">{{date format='MMMM, YYYY'}}</date>
             </div>
           </div>
         </div>

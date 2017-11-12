@@ -1,14 +1,15 @@
 {{!< default}}
 <progress value="0"></progress>
+
 {{#post}}
-  <article class="mt4 blog-post">
+  <article class="mt6">
     <header class="flex flex-ac flex-jc flex-dc">
-      <h1 class="mt0 mb1">{{{title}}}</h1>
-      <span class="dis-in-bl m0 flex flex-jfs"><time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time>{{#if tags}}. Posted in {{tags separator=", "}}.{{/if}}</span>
+      <h1 class="center tc mw7 lh-copy f3 f2-ns lh-copy mb0 pt4 black-80 mt0 mb1">{{{title}}}</h1>
+      <date class="db i black-30 pb4 f4">{{date format='DD MMMM, YYYY'}}</date>
     </header>
     <section class="wrap">
       {{#if image}}<img src="{{image}}" alt="post-banner" />{{/if}}
-      <div class="mb3">
+      <div class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns black-80">
         {{content}}
       </div>
       <div class="fancy-div"></div>

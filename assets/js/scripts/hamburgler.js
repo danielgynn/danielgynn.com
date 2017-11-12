@@ -1,5 +1,6 @@
 // JQuery code for the hamburgler component
 document.getElementById('hamburgler').addEventListener('click', checkNav);
+
 window.addEventListener("keyup", function(e) {
   if (e.keyCode == 27) closeNav();
 }, false);

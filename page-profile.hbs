@@ -1,62 +1,72 @@
 {{!< default}}
 
-<section class="mt4">
-  <h1>Profile</h1>
-  <div class="flex flex-col-mob">
-    <div class="w-40">
-      <img class="profile-img" src="http://i.imgur.com/XqMBXlL.jpg" alt="Self portrait" />
+<section class="mt6">
+  <div class="">
+    <h1 class="center tc pt3 pl3 mw6 pr3 f3 f3-ns lh-copy">Hey, I'm Daniel. 👋 </h1>
+
+    <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">
+      I'm a frontend engineer & designer based in London. I build things for the web, with a focus for minimal interface design & typography.
+    </p>
+
+    <div class="pt3 pb3 center tc mw7">
+      <img src="http://i.imgur.com/XqMBXlL.jpg" alt="Self portrait" />
     </div>
 
-    <div class="w-60">
+    <div class="center mw6 pl3 pr3 pl0-ns pr0-ns pb4 pb6-ns f4 pt2-ns lh-copy black-80">
       {{#post}}
         {{content}}
       {{/post}}
 
       <div class="flex flex-wrap">
-        <div class="details-wrapper flex-50">
-          <h2>Experience</h2>
-          <div class="flex flex-row-wrap flex-jsb mb1">
+        <div class="flex-100">
+          <h2>Portfolio</h2>
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="http://filament.uk.com">Filament</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">2017-Present</small>
             <small class="flex-100">Frontend Engineer</small>
           </div>
 
-          <div class="flex flex-row-wrap flex-jsb mb1">
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="https://repositive.io">Repositive</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">2016-2017</small>
             <small class="flex-100">Frontend Developer</small>
           </div>
 
-          <div class="flex flex-row-wrap flex-jsb mb1">
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="https://repositive.io">Repositive</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">2015-2016</small>
             <small class="flex-100">Junior Web Developer</small>
           </div>
         </div>
 
-        <div class="details-wrapper flex-50">
+        <div class="flex-100">
           <h2>Education</h2>
-          <div class="flex flex-row-wrap flex-jsb mb1">
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="https://www.kent.ac.uk/">University of Kent</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">2013-2017</small>
             <small class="flex-100">Computer Science with a Year in Industry</small>
           </div>
         </div>
 
-        <div class="details-wrapper flex-50">
+        <div class="flex-100">
           <h2>Public Speaking</h2>
-          <div class="flex flex-row-wrap flex-jsb mb1">
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="https://vimeo.com/178828815">Ember London</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">11.08.2016</small>
             <small class="flex-100">A Beginner's Journey into Ember.js</small>
           </div>
-          <div class="flex flex-row-wrap flex-jsb mb1">
+          <div class="flex flex-row-wrap flex-jsb mb3">
             <p class="flex-grow flex-auto mb0"><a href="http://danielgynn-cambjs.surge.sh/">CambridgeJS</a></p>
             <small class="flex flex-ac flex-jfe flex-auto mr3">11.07.2016</small>
             <small class="flex-100">Building Ambitious Web Applications with Ember.js</small>
           </div>
         </div>
       </div>
+
+      <div class="bb b--light-gray pt4 pb4"></div>
+
+      <h2>Website Credits</h2>
+      <p>This website is built on top of <a href="https://ghost.org/">Ghost</a>, using <a href="http://tachyons.io/">Tachyons</a> for styling, and hosted on <a href="https://www.heroku.com/">Heroku</a>.</p>
     </div>
   </div>
 </section>

@@ -3,21 +3,14 @@
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  .hamburgler-icon-wrapper {
+    display: block !important;
+    right: 1rem !important;
+    top: 1rem !important;
+  }
+
   main {
-    color: $color-white !important;
-    width: 55vw;
-    overflow: hidden;
-    margin: 0 auto -100px 10%;
-    padding: 0 !important;
-    position: absolute;
-
-    @media (max-width: 600px) {
-      width: 85vw;
-    }
-
-    @media (max-width: 780px) {
-      width: 80vw;
-    }
+    height: 75%;
 
     ::selection {
       background: $color-white !important;
@@ -28,6 +21,10 @@
       animation-delay: .2s;
     }
 
+    h1 {
+      margin-bottom: 0;
+    }
+
     .section-one {
       animation-delay: 1.2s;
     }
@@ -35,46 +32,6 @@
     .section-two {
       animation-delay: 2.2s;
       margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 6vw;
-      font-family: $font-playfair !important;
-      font-weight: 500;
-      // font-style: italic;
-      line-height: 1;
-      letter-spacing: 3px;
-      margin: 0;
-      border: 0;
-      display: block;
-
-      @media (max-width: 600px) {
-        font-size: 10vw;
-      }
-    }
-
-    a {
-      font-style: italic;
-      color: $color-white;
-      opacity: $opacity-fade;
-      transition: all .4s ease-in-out;
-
-      &:hover {
-        color: $color-white;
-        opacity: $opacity-show;
-
-        &::after {
-          background-color: $color-charcoal;
-        }
-      }
-    }
-
-    p,
-    a {
-      @media (max-width: 600px) {
-        font-size: 5vw;
-        line-height: 8vw;
-      }
     }
   }
 }

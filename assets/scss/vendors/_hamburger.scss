@@ -1,10 +1,16 @@
 .hamburgler-icon-wrapper {
   position: relative;
-  display: block;
+  display: none;
   height: 26px;
   width: 26px;
   cursor: pointer;
   z-index: 1000002;
+}
+
+.hamburgler-active {
+  .main-nav {
+    position: absolute !important;
+  }
 }
 
 .hamburgler-icon,
@@ -22,6 +28,7 @@
 
 .hamburgler-icon {
   top: .75em;
+  opacity: 1;
 }
 
 .hamburgler-icon::before {
@@ -69,16 +76,6 @@
  .hamburgler-menu-list {
    transform: translate(-50%, -50%) scale(1);
  }
-
- .hamburgler-icon-wrapper {
-   position: fixed;
-   right: 13vw;
-
-    @media (max-width: 600px) {
-      right: 1rem;
-      top: 1.9rem;
-    }
-  }
 }
 
 .hamburgler-menu {

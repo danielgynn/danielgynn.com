@@ -1,15 +1,13 @@
 // Import from Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Spectral:300,400,400i,500,500i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,500,500i,700');
 
 html,
 body {
-  font-family: $font-spectral;
   color: $color-black;
-  font-size: 18px;
+  font-size: 17px;
   height: 100%;
+  font-family: $font-open;
 }
 
 h1,
@@ -18,16 +16,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-playfair;
-  font-weight: 400;
+  font-family: $font-spectral;
   line-height: 1.45;
   margin-bottom: 1rem;
 }
 
 p {
+  font-family: $font-spectral;
   margin: 0 auto 24px;
   letter-spacing: 0;
-  font-size: 1.06rem;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
@@ -49,11 +46,11 @@ p {
 }
 
 article p {
-  font-family: $font-spectral;
+  // font-family: $font-spectral;
 }
 
 span {
-  font-family: $font-raleway;
+  font-family: $font-open;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 15px;
@@ -70,7 +67,6 @@ a,
 a:focus,
 a:hover {
   color: $color-charcoal;
-  text-decoration: none;
 }
 
 a {

@@ -1,11 +1,6 @@
 .navigation-bar {
-  width: $page-width;
   margin: 0 auto;
   border-bottom: 1px solid darken($color-grey, 10%);
-
-  @media (max-width: 780px) {
-    width: 90%;
-  }
 
   .title-link {
     img {
@@ -17,7 +12,6 @@
       padding: .5rem 0;
       margin: .5rem 0 !important;
       font-size: 2rem;
-      font-family: $font-playfair;
       transition: $transition-all;
 
       &:hover {
