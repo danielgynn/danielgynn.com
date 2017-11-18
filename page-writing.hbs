@@ -5,14 +5,17 @@
 
   {{#get "posts" limit="all" filter="tags:[learning, books, writing]" as |posts pages|}}
     <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">
-      A collection of <strong>{{pages.total}}</strong> posts on web development, design and books.
+      This archive contains a collection of <strong>{{pages.total}}</strong> posts on web development, design and books.
+    </p>
+    <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt1 black-80">
+      You can also check out <a href="/weekly">The Weekly Edition</a>, a newsletter/journal published every Sunday evening. ☕️ 📰
     </p>
   {{/get}}
 
   <div class="mw6 center bb b--light-gray pt2"></div>
 
   <div class="center mw6 pl3 pr3 pl0-ns pr0-ns pb3 pb6-ns f4 pt4 pt4-ns lh-copy black-80">
-    {{#get "posts" limit="all" include="author,tags" filter="featured:false+tags:[learning, books, writing]" as |posts pages|}}
+    {{#get "posts" limit="all" include="author,tags" filter="tags:[learning, books, writing]" as |posts pages|}}
       {{#foreach posts}}
         <article class="{{post_class}}">
           <section class="list tl-ns f4 pt2 pb2 dim-subtle mb1">
@@ -23,39 +26,5 @@
         </article>
       {{/foreach}}
     {{/get}}
-  </div>
-
-  <div class="flex flex-col-mob">
-    <div class="w-100">
-
-      <div class="flex-col-mob flex-col-tab">
-        <!-- <div class="w-100 w-100-tab mb2">
-          {{#get "posts" limit="1" include="author,tags" filter="featured:true" as |posts pages|}}
-
-            {{#foreach posts}}
-              <article class="post-listing-featured flex-col-mob {{post_class}}">
-                <header class="w-50 w-100-tab">
-                  <img data-src="{{image}}" class="lazyload" />
-                </header>
-                <section class="w-50 w-100-tab">
-                  <div class="m1">
-                    <span>FEATURED</span>
-                    <h2 class="mt2 mb1"><a href="{{url}}">{{{title}}}</a></h1>
-                    <p>{{excerpt characters="240"}}...</p>
-                    <span>Posted {{date format='DD MMMM, YYYY'}}</span>
-                    <!-- <a href="{{url}}">READ MORE</a> -->
-                  <!-- </div>
-                </section>
-              </article>
-            {{/foreach}}
-          {{/get}}
-        </div> -->
-
-        <div class="w-100 w-100-tab">
-
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>

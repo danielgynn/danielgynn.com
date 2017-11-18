@@ -2,6 +2,7 @@
 <progress value="0"></progress>
 
 {{#post}}
+
   <article class="mt6">
     <header class="flex flex-ac flex-jc flex-dc">
       <h1 class="center tc mw7 lh-copy f3 f2-ns lh-copy mb0 pt4 black-80 mt0 mb1">{{{title}}}</h1>
@@ -12,8 +13,17 @@
       <div class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns black-80">
         {{content}}
       </div>
-      <div class="fancy-div"></div>
-      {{> "disqus"}}
+
+      {{#has tag="The Weekly Edition"}}
+        <div class="mw6 center bb b--light-gray pt2"></div>
+        <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pb5 pt3 black-80">
+          <a href="/weekly">← Back to The Weekly Edition</a>
+        </p>
+      {{else}}
+        <div class="fancy-div"></div>
+        {{> "disqus"}}
+      {{/has}}
+
     </section>
   </article>
 {{/post}}

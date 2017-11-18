@@ -1,0 +1,54 @@
+{{!< default}}
+
+<section class="mt6">
+  <h1 class="center tc pt3 pl3 mw6 pr3 f3 f3-ns lh-copy">The Weekly Edition</h1>
+
+  {{#get "posts" limit="all" filter="tags:[the-weekly-edition]" as |posts pages|}}
+    <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">
+      Welcome to The Weekly Edition, a newsletter/journal published every Sunday evening. The format covers topics such as current affairs, technology, design, & photography.
+    </p>
+    <p class="center mw6 pl3 pr3 pl0-ns pr0-ns f4 pt2-ns lh-copy black-80">There are currently <strong>{{pages.total}}</strong> published editions since <em>18 November 2017</em>. ☕️ 📰</p>
+  {{/get}}
+
+  <div class="mw6 center bb b--light-gray pt2"></div>
+
+  <div class="center mw8-ns pl0-ns pr0-ns">
+    <div class="pt4-ns flex-col-mob flex-col-tab">
+      <div class="w-100 w-100-tab mb2">
+        {{#get "posts" limit="1" include="author,tags" filter="featured:true+tags:[the-weekly-edition]" as |posts pages|}}
+          {{#foreach posts}}
+            <article class="post-listing-featured flex-col-mob {{post_class}}">
+              <header class="w-50 w-100-tab">
+                <img src="https://i.imgur.com/mB3yO94.jpg" />
+              </header>
+              <section class="w-50 w-100-tab pl3 pr3">
+                <div class="m1">
+                  <span class="db i black-30 pt5 pb2 f5">LATEST EDITION</span>
+                  <h2 class="mt2 mb1"><a href="{{url}}">{{{title}}}</a></h1>
+                  <p class="pt1">{{excerpt characters="280"}}...</p>
+                  <date class="db i black-30 pb4 f5">{{date format='DD MMMM, YYYY'}}</date>
+                </div>
+              </section>
+            </article>
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="center mw6 pl3 pr3 pl0-ns pr0-ns pb3 pb6-ns f4 pt4 pt4-ns lh-copy black-80">
+    <h2 class="pb3">Archive</h2>
+    {{#get "posts" limit="all" include="author,tags" filter="featured:false+tags:[the-weekly-edition]" as |posts pages|}}
+      {{#foreach posts}}
+        <article class="{{post_class}}">
+          <section class="list tl-ns f4 dim-subtle mb1">
+            <a class="fw7" href="{{url}}">{{{title}}}</a>
+            <p class="mb0 pt1 f5">{{excerpt characters="140"}}...</p>
+            <date class="db i black-30 pb4 f5">{{date format='DD MMMM, YYYY'}}</date>
+          </section>
+        </article>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</section>
