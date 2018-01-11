@@ -46,6 +46,6 @@ gulp.task('jshint', function () {
 });
 
 gulp.task('default', ['styles', 'scripts'], function() {
-gulp.watch('./assets/scss/**/*.scss', ['styles']);
+  gulp.watch('./assets/scss/**/*.scss', ['styles']);
   gulp.watch('./assets/js/**/*.js', ['scripts', 'jshint']);
 });
